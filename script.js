@@ -441,6 +441,7 @@ function pronounTables() {
   return [
     personalPronounTable(),
     objectPronounOrderTable(),
+    reflexivePronounOrderTable(),
     doublePronounOrderTable(),
     possessivePronounTable(),
     demonstrativePronounTable(),
@@ -483,6 +484,22 @@ function objectPronounOrderTable() {
       ["Вопрос", `${strong("местоим. + глагол-связка")}`, `${strong("le lit-elle ?")} - она это читает?`],
       ["Приказ, утв.", `${strong("глагол + местоим.")}`, `${strong("lis-le")} - прочитай это`],
       ["Приказ, отриц.", `${strong("ne + местоим. + глагол + pas")}`, `${strong("ne le lis pas")} - не читай это`]
+    ]
+  };
+}
+
+function reflexivePronounOrderTable() {
+  return {
+    title: "Возвратные глаголы",
+    note: "se lever",
+    columns: ["Тип фразы", "Схема", "Пример"],
+    rows: [
+      ["Формы", `${strong("me, te, se, nous, vous, se")}`, `${strong("je me lève")} / ${strong("nous nous levons")}`],
+      ["Утверждение", `${strong("подл. + возвратн. + глагол")}`, `${strong("elle se lève")} - она встаёт`],
+      ["Отрицание", `${strong("ne + возвратн. + глагол + pas")}`, `${strong("elle ne se lève pas")} - она не встаёт`],
+      ["Вопрос", `${strong("возвратн. + глагол-связка")}`, `${strong("se lève-t-elle ?")} - она встаёт?`],
+      ["Приказ, утв.", `${strong("глагол + toi/nous/vous")}`, `${strong("lève-toi")} - встань`],
+      ["Приказ, отриц.", `${strong("ne + te/nous/vous + глагол + pas")}`, `${strong("ne te lève pas")} - не вставай`]
     ]
   };
 }
