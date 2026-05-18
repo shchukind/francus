@@ -442,7 +442,6 @@ function pronounTables() {
     personalPronounTable(),
     objectPronounOrderTable(),
     reflexivePronounOrderTable(),
-    doublePronounOrderTable(),
     possessivePronounTable(),
     demonstrativePronounTable(),
     compactPronounList("Прочие местоимения", "из словаря", [
@@ -500,28 +499,6 @@ function reflexivePronounOrderTable() {
       ["Вопрос", `${strong("возвратн. + глагол-связка")}`, `${strong("se lève-t-elle ?")} - она встаёт?`],
       ["Приказ, утв.", `${strong("глагол + toi/nous/vous")}`, `${strong("lève-toi")} - встань`],
       ["Приказ, отриц.", `${strong("ne + te/nous/vous + глагол + pas")}`, `${strong("ne te lève pas")} - не вставай`]
-    ]
-  };
-}
-
-function doublePronounOrderTable() {
-  return {
-    title: "Если два местоимения",
-    note: "коротко",
-    columns: ["Перед глаголом", "В утвердительном приказе"],
-    rows: [
-      [
-        `${strong("me/te/se/nous/vous")} → ${strong("le/la/les")} → ${strong("lui/leur")}`,
-        `${strong("le/la/les")} → ${strong("moi/toi/lui/nous/vous/leur")}`
-      ],
-      [
-        `${strong("je te le donne")} - я тебе это даю`,
-        `${strong("donne-le-moi")} - дай мне это`
-      ],
-      [
-        `${strong("je ne te le donne pas")} - я тебе это не даю`,
-        `${strong("ne me le donne pas")} - не давай мне это`
-      ]
     ]
   };
 }
