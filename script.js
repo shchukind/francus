@@ -24,6 +24,7 @@ const weekdays = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "
 const titles = {
   dictionary: ["Словарь", "Лексика до печатной страницы 85"],
   verbs: ["Глаголы", "Формы, которые уже появились в учебнике"],
+  pronouns: ["Местоимения", "Личные, притяжательные и указательные формы"],
   calendar: ["Календарь", "Дни недели, месяцы и числа"],
   materials: ["Материалы", "Учебник, упражнения и фонетика"],
   "trainer-gender": ["Тренажёр рода", "Выбери un или une"],
@@ -46,6 +47,7 @@ const els = {
   archiveModal: document.querySelector("#archiveModal"),
   archiveList: document.querySelector("#archiveList"),
   archiveClear: document.querySelector("#archiveClearBtn"),
+  pronounSections: document.querySelector("#pronounSections"),
   calendarGrid: document.querySelector("#calendarGrid"),
   verbsSortFilters: document.querySelector("#verbsSortFilters"),
   verbsTypeFilters: document.querySelector("#verbsTypeFilters"),
@@ -193,6 +195,7 @@ function toViewId(view) {
   return {
     dictionary: "dictionaryView",
     verbs: "verbsView",
+    pronouns: "pronounsView",
     calendar: "calendarView",
     materials: "materialsView",
     "trainer-gender": "trainerGenderView",
@@ -206,6 +209,7 @@ function renderAll() {
   renderFilterOptions();
   renderDictionary();
   renderVerbs();
+  renderPronouns();
   renderCalendar();
   renderArchiveCount();
 }
@@ -215,7 +219,7 @@ function renderStats() {
   const activeNouns = nouns.filter((item) => !isCalendarNoun(item) && !state.archivedWords.has(itemKey("noun", item.lemma)));
   const activeVerbs = verbs.filter((item) => !state.archivedWords.has(itemKey("verb", item.infinitive)));
   const activeAdjectives = adjectives.filter((item) => !state.archivedWords.has(itemKey("adjective", item.lemma)));
-  const visiblePhrases = phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item) && !state.archivedWords.has(itemKey("phrase", item.text)));
+  const visiblePhrases = phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item) && !isPronounPhrase(item) && !state.archivedWords.has(itemKey("phrase", item.text)));
   const pageMatch = String(state.data.metadata?.printed_pages_used || "").match(/(\d+)\s*$/);
   const pageLabel = pageMatch ? `до стр. ${pageMatch[1]}` : "текущая база";
   els.dataSource.textContent = `Учебник Потушанской · ${pageLabel}`;
@@ -270,7 +274,7 @@ function dictionaryItems() {
       sortKey: item.lemma,
       order: data.nouns.length + data.verbs.length + index
     })),
-    ...data.function_words_and_phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item)).map((item, index) => ({
+    ...data.function_words_and_phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item) && !isPronounPhrase(item)).map((item, index) => ({
       kind: "phrase",
       key: itemKey("phrase", item.text),
       fr: item.text,
@@ -278,8 +282,8 @@ function dictionaryItems() {
       translation: item.translation_ru,
       page: pages(item),
       tagClass: "plain",
-      typeTag: phraseKindLabel(item.type),
-      serviceType: serviceType(item.type),
+      typeTag: phraseKindLabel(item.type, item),
+      serviceType: serviceType(item.type, item),
       sortKey: item.text,
       order: data.nouns.length + data.verbs.length + data.adjectives.length + index
     }))
@@ -386,6 +390,60 @@ function renderVerbs() {
       }
     });
   });
+}
+
+function renderPronouns() {
+  const groups = pronounGroups();
+  els.pronounSections.innerHTML = groups.map((group) => `
+    <section class="pronoun-section">
+      <div class="pronoun-section-head">
+        <h3>${escapeHtml(group.title)}</h3>
+        <span>${group.items.length}</span>
+      </div>
+      <div class="pronoun-table-wrap">
+        <table class="pronoun-table">
+          <thead>
+            <tr>
+              <th>Форма</th>
+              <th>Перевод</th>
+              <th>Тип</th>
+              <th>Стр.</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${group.items.map((item) => `
+              <tr>
+                <td><strong>${escapeHtml(item.text)}</strong></td>
+                <td>${escapeHtml(item.translation_ru || "")}</td>
+                <td>${escapeHtml(phraseTypeLabel(item.type))}</td>
+                <td>${escapeHtml(String(pages(item) || ""))}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `).join("");
+}
+
+function pronounGroups() {
+  const items = state.data.function_words_and_phrases.filter(isPronounPhrase);
+  const order = [
+    ["personal", "Личные местоимения"],
+    ["possessive", "Притяжательные"],
+    ["demonstrative", "Указательные"],
+    ["indefinite", "Неопределённые"]
+  ];
+  return order.map(([kind, title]) => ({
+    title,
+    items: items.filter((item) => pronounGroup(item.type) === kind).sort(compareByPageThenText)
+  })).filter((group) => group.items.length);
+}
+
+function compareByPageThenText(a, b) {
+  const pageDiff = firstPage({ page: pages(a) }) - firstPage({ page: pages(b) });
+  if (pageDiff !== 0) return pageDiff;
+  return (a.text || "").localeCompare(b.text || "", "fr", { sensitivity: "base" });
 }
 
 function renderCalendar() {
@@ -779,8 +837,8 @@ function phraseTypeLabel(type) {
   return labels[type] || type;
 }
 
-function phraseKindLabel(type) {
-  if (type === "phrase") return "фраза";
+function phraseKindLabel(type, item = null) {
+  if (isPhraseItem(type, item)) return "фраза";
   if (type === "question" || type === "question phrase" || type === "question word") return "вопр.";
   if (type === "preposition") return "предл.";
   if (type === "personal pronoun" || type === "indefinite pronoun") return "мест.";
@@ -793,14 +851,43 @@ function phraseKindLabel(type) {
   return "служ.";
 }
 
-function serviceType(type) {
-  if (type === "phrase") return "phrase";
+function serviceType(type, item = null) {
+  if (isPhraseItem(type, item)) return "phrase";
   if (type === "question" || type === "question phrase" || type === "question word") return "question";
   if (type === "preposition") return "preposition";
   if (type === "adverb") return "adverb";
   if (type === "adverb/noun") return "adverb";
   if (type.includes("adjective") || type === "personal pronoun" || type === "indefinite pronoun" || type === "possessive phrase") return "pronoun";
   return "service";
+}
+
+function isPhraseType(type) {
+  return [
+    "phrase",
+    "question phrase",
+    "time expression",
+    "weather phrase",
+    "verb construction",
+    "quantity expression",
+    "possessive phrase"
+  ].includes(type);
+}
+
+function isPhraseItem(type, item) {
+  if (isPhraseType(type)) return true;
+  if (!item) return false;
+  return type === "question" && /[\s'’]/.test(item.text);
+}
+
+function isPronounPhrase(item) {
+  return ["personal pronoun", "indefinite pronoun"].includes(item.type) || item.type.includes("possessive adjective") || item.type.includes("demonstrative adjective");
+}
+
+function pronounGroup(type) {
+  if (type === "personal pronoun") return "personal";
+  if (type.includes("possessive")) return "possessive";
+  if (type.includes("demonstrative")) return "demonstrative";
+  return "indefinite";
 }
 
 function itemKey(kind, text) {
@@ -926,7 +1013,7 @@ function openVerbModal(verb) {
   if (!verb) return;
   els.verbModalTitle.textContent = verb.infinitive;
   els.verbModalTranslation.textContent = verb.translation_ru;
-  els.verbModalType.textContent = verbFormLabel(verb);
+  els.verbModalType.innerHTML = renderVerbBadges(verb);
   els.verbModalForms.innerHTML = Object.entries(verb.forms).map(([pronoun, form]) => `
     <div class="form-row">
       <span class="pronoun">${escapeHtml(displayPronoun(pronoun, form))}</span>

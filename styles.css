@@ -128,6 +128,17 @@ h1 {
   background: rgba(255, 255, 255, 0.72);
 }
 
+.trainer-start {
+  margin-top: 14px;
+}
+
+.nav-btn-trainer {
+  min-height: 36px;
+  color: #59636d;
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(82, 97, 114, 0.08);
+}
+
 .nav-btn-materials {
   margin-top: 12px;
   border-color: rgba(82, 97, 114, 0.16);
@@ -247,6 +258,14 @@ h2 {
   justify-content: flex-end;
   margin-top: -4px;
   align-items: center;
+}
+
+.sort-filters .chip {
+  min-height: 32px;
+  padding: 0 10px;
+  color: #747d86;
+  font-size: 12px;
+  font-weight: 650;
 }
 
 .chip,
@@ -547,8 +566,9 @@ tr:last-child td {
   padding: 0 10px;
   gap: 6px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 650;
   margin-right: auto;
+  opacity: 0.62;
 }
 
 .archive-toggle span {
@@ -563,8 +583,9 @@ tr:last-child td {
 }
 
 .archive-toggle.has-items {
-  color: var(--accent-dark);
-  border-color: #d8e0e9;
+  color: #66717c;
+  border-color: #e1e7ed;
+  opacity: 0.78;
 }
 
 .hide-word-btn {
@@ -633,6 +654,72 @@ tr:hover .hide-word-btn,
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
+}
+
+.pronoun-sections {
+  display: grid;
+  gap: 14px;
+}
+
+.pronoun-section {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.pronoun-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #f8fafc, #f3f5f7);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.pronoun-section-head h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pronoun-section-head span {
+  min-width: 28px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pronoun-table-wrap {
+  overflow: auto;
+}
+
+.pronoun-table {
+  min-width: 620px;
+  box-shadow: none;
+}
+
+.pronoun-table th:nth-child(1),
+.pronoun-table td:nth-child(1) {
+  width: 25%;
+}
+
+.pronoun-table th:nth-child(3),
+.pronoun-table td:nth-child(3) {
+  width: 34%;
+}
+
+.pronoun-table th:nth-child(4),
+.pronoun-table td:nth-child(4) {
+  width: 80px;
+  text-align: right;
+  color: var(--muted);
 }
 
 .verb-grid {
@@ -822,7 +909,7 @@ tr:hover .hide-word-btn,
   border: 1px solid var(--line);
   border-radius: 16px;
   box-shadow: 0 26px 80px rgba(20, 28, 30, 0.28);
-  padding: 24px;
+  padding: 28px 58px 28px 28px;
 }
 
 .icon-close {
@@ -838,6 +925,7 @@ tr:hover .hide-word-btn,
   cursor: pointer;
   font-size: 24px;
   line-height: 1;
+  z-index: 1;
 }
 
 .modal-forms {

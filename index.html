@@ -18,10 +18,11 @@
       <nav class="nav" aria-label="Разделы">
         <button class="nav-btn is-active" data-view="dictionary">Словарь</button>
         <button class="nav-btn" data-view="verbs">Глаголы</button>
+        <button class="nav-btn" data-view="pronouns">Местоимения</button>
         <button class="nav-btn" data-view="calendar">Календарь</button>
-        <button class="nav-btn" data-view="trainer-gender">Род</button>
-        <button class="nav-btn" data-view="trainer-translate">Перевод</button>
-        <button class="nav-btn" data-view="trainer-conjugation">Спряжение</button>
+        <button class="nav-btn nav-btn-trainer trainer-start" data-view="trainer-gender">Род</button>
+        <button class="nav-btn nav-btn-trainer" data-view="trainer-translate">Перевод</button>
+        <button class="nav-btn nav-btn-trainer" data-view="trainer-conjugation">Спряжение</button>
         <button class="nav-btn nav-btn-materials" data-view="materials">Материалы</button>
       </nav>
       <div class="stats-panel">
@@ -86,6 +87,10 @@
           <button class="chip" data-verbs-sort="alphabet">По алфавиту</button>
         </div>
         <div class="verb-grid" id="verbCards"></div>
+      </section>
+
+      <section class="view" id="pronounsView">
+        <div class="pronoun-sections" id="pronounSections"></div>
       </section>
 
       <section class="view" id="calendarView">
@@ -217,6 +222,6 @@
       </section>
     </div>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
   </body>
 </html>
