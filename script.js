@@ -13,9 +13,12 @@ const state = {
   archivedWords: new Set(),
   query: "",
   genderItem: null,
+  genderChecked: false,
   translateItem: null,
   translateMode: "fr-ru",
-  conjugationItem: null
+  translateChecked: false,
+  conjugationItem: null,
+  conjugationChecked: false
 };
 
 const hiddenPhraseTexts = new Set(["le", "la", "l'", "les", "un", "une"]);
@@ -176,14 +179,40 @@ function bindEvents() {
       closeVerbModal();
       closeArchiveModal();
     }
+    if (event.key === "Enter" && state.view === "trainer-gender" && state.genderChecked) {
+      event.preventDefault();
+      nextGender();
+    }
   });
 
   els.translateInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") checkTranslate();
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleTranslateEnter();
+    }
   });
   els.conjugationInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") checkConjugation();
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleConjugationEnter();
+    }
   });
+}
+
+function handleTranslateEnter() {
+  if (state.translateChecked) {
+    nextTranslate();
+  } else {
+    checkTranslate();
+  }
+}
+
+function handleConjugationEnter() {
+  if (state.conjugationChecked) {
+    nextConjugation();
+  } else {
+    checkConjugation();
+  }
 }
 
 function setView(view) {
@@ -723,6 +752,7 @@ function nextGender() {
     !state.archivedWords.has(itemKey("noun", noun.lemma))
   ));
   state.genderItem = sample(items);
+  state.genderChecked = false;
   els.genderPrompt.textContent = `___ ${state.genderItem.lemma}`;
   els.genderTranslation.textContent = state.genderItem.translation_ru;
   setFeedback(els.genderFeedback, "");
@@ -731,6 +761,7 @@ function nextGender() {
 function checkGender(answer) {
   const correct = state.genderItem.indefinite_article;
   const ok = answer === correct;
+  state.genderChecked = true;
   setFeedback(
     els.genderFeedback,
     ok ? `Верно: ${correct} ${state.genderItem.lemma}` : `Почти. Правильно: ${correct} ${state.genderItem.lemma}`,
@@ -751,6 +782,7 @@ function nextTranslate() {
       .map((item) => ({ fr: item.lemma, ru: item.translation_ru }))
   ];
   state.translateItem = sample(items);
+  state.translateChecked = false;
   els.translateModeLabel.textContent = state.translateMode === "fr-ru" ? "Французский → русский" : "Русский → французский";
   els.translatePrompt.textContent = state.translateMode === "fr-ru" ? state.translateItem.fr : state.translateItem.ru;
   els.translateInput.value = "";
@@ -772,6 +804,7 @@ function checkTranslate() {
   } else {
     setFeedback(els.translateFeedback, `Ответ: ${expected}`, false);
   }
+  state.translateChecked = true;
 }
 
 function nextConjugation() {
@@ -779,6 +812,7 @@ function nextConjugation() {
     return Object.entries(verb.forms).map(([pronoun, form]) => ({ verb, pronoun, form }));
   });
   state.conjugationItem = sample(forms);
+  state.conjugationChecked = false;
   els.conjugationHint.textContent = `${state.conjugationItem.verb.infinitive} — ${state.conjugationItem.verb.translation_ru}`;
   els.conjugationPrompt.textContent = `${state.conjugationItem.pronoun} ___`;
   els.conjugationInput.value = "";
@@ -916,6 +950,7 @@ function checkConjugation() {
   const expected = state.conjugationItem.form;
   const ok = normalize(els.conjugationInput.value) === normalize(expected);
   setFeedback(els.conjugationFeedback, ok ? `Верно: ${expected}` : `Правильно: ${expected}`, ok);
+  state.conjugationChecked = true;
 }
 
 function displayNoun(noun) {
