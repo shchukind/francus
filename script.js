@@ -410,7 +410,7 @@ function renderGrammar() {
         <span>${escapeHtml(group.note)}</span>
       </div>
       <div class="pronoun-table-wrap">
-        <table class="pronoun-table">
+        <table class="pronoun-table pronoun-table-${group.columns.length}">
           <thead>
             <tr>
               ${group.columns.map((column) => `<th>${escapeHtml(column)}</th>`).join("")}

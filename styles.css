@@ -714,10 +714,31 @@ tr:hover .hide-word-btn,
   font-size: 13px;
   text-align: center;
   vertical-align: middle;
+  width: auto;
 }
 
-.pronoun-table th:first-child,
-.pronoun-table td:first-child {
+.pronoun-table-2 th,
+.pronoun-table-2 td {
+  width: 50%;
+}
+
+.pronoun-table-3 th:first-child,
+.pronoun-table-3 td:first-child {
+  width: 18%;
+}
+
+.pronoun-table-3 th:nth-child(2),
+.pronoun-table-3 td:nth-child(2) {
+  width: 34%;
+}
+
+.pronoun-table-3 th:nth-child(3),
+.pronoun-table-3 td:nth-child(3) {
+  width: 48%;
+}
+
+.pronoun-table-4 th:first-child,
+.pronoun-table-4 td:first-child {
   width: 16%;
 }
 
@@ -728,6 +749,7 @@ tr:hover .hide-word-btn,
 .pronoun-table strong {
   font-size: 13.5px;
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .pronoun-section-row td {
