@@ -1,0 +1,2196 @@
+{
+  "metadata": {
+    "source_pdf": "C:\\Users\\denis\\OneDrive\\Рабочий стол\\Codex\\Francus\\Учебник Потушанская 2.pdf",
+    "range_requested": "до печатной страницы 56",
+    "pdf_pages_used": "6-55",
+    "printed_pages_used": "7-56",
+    "status": "draft_manual_extraction",
+    "notes": [
+      "PDF is scanned; no text layer was available.",
+      "Pronunciation-only word lists were mostly excluded from learning vocabulary.",
+      "Nouns are stored without article in lemma; article and gender are separate for gender drills.",
+      "Verb forms contain only forms introduced or clearly used up to printed page 25.",
+      "Printed pages 25-56 were imported from scanned PDF page images; pronunciation-only examples are filtered where possible.",
+      "Vocabulary table blocks are now being imported as table rows, not only as selected text words."
+    ],
+    "last_import": "2026-05-18: added vocabulary tables from printed pages 42 and 52 after manual review"
+  },
+  "nouns": [
+    {
+      "lemma": "mère",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "мама; мать",
+      "printed_page": 10,
+      "source": "ma mère"
+    },
+    {
+      "lemma": "femme",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "жена; женщина",
+      "printed_page": 10,
+      "source": "ma femme; cette femme"
+    },
+    {
+      "lemma": "salle",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "аудитория; зал",
+      "printed_page": 10,
+      "source": "ma salle"
+    },
+    {
+      "lemma": "place",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "место",
+      "printed_page": 10,
+      "source": "ta place"
+    },
+    {
+      "lemma": "chaise",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "стул",
+      "printed_page": 10,
+      "source": "ta chaise"
+    },
+    {
+      "lemma": "table",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "стол",
+      "source": "sa table; une table",
+      "printed_pages": [
+        10,
+        42
+      ]
+    },
+    {
+      "lemma": "veste",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "пиджак; куртка",
+      "printed_page": 10,
+      "source": "sa veste; cette veste"
+    },
+    {
+      "lemma": "soeur",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "сестра",
+      "printed_page": 13,
+      "source": "sa soeur"
+    },
+    {
+      "lemma": "revue",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "журнал",
+      "source": "une revue",
+      "printed_pages": [
+        19,
+        41
+      ]
+    },
+    {
+      "lemma": "lettre",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "письмо",
+      "printed_page": 19,
+      "source": "une lettre"
+    },
+    {
+      "lemma": "fleur",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "цветок",
+      "printed_page": 19,
+      "source": "une fleur; cette fleur"
+    },
+    {
+      "lemma": "livre",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "книга",
+      "printed_page": 20,
+      "source": "ce livre"
+    },
+    {
+      "lemma": "film",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "фильм",
+      "printed_page": 20,
+      "source": "ce film"
+    },
+    {
+      "lemma": "musique",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "музыка",
+      "printed_page": 22,
+      "source": "la musique"
+    },
+    {
+      "lemma": "patinage",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "катание на коньках",
+      "printed_page": 22,
+      "source": "le patinage"
+    },
+    {
+      "lemma": "patinage artistique",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "фигурное катание",
+      "printed_page": 22,
+      "source": "le patinage artistique"
+    },
+    {
+      "lemma": "amie",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "подруга",
+      "printed_page": 22,
+      "source": "une amie; l'amie de ma soeur"
+    },
+    {
+      "lemma": "capitale",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "столица",
+      "printed_page": 22,
+      "source": "la capitale"
+    },
+    {
+      "lemma": "actrice",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "актриса",
+      "printed_page": 22,
+      "source": "une actrice; l'actrice"
+    },
+    {
+      "lemma": "père",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "отец",
+      "source": "le père",
+      "printed_pages": [
+        25,
+        42
+      ]
+    },
+    {
+      "lemma": "café",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "кофе; кафе",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "fée",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "фея",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "dé",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "игральная кость; кубик",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "épée",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "шпага; меч",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "bébé",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "младенец",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "année",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "год",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "céleri",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "сельдерей",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "cinéma",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "кино; кинотеатр",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "céréale",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "злак; крупа",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "armée",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "армия",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "université",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "университет",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "heure",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "час; время",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "demie",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "половина",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "quart",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "четверть",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "étude",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "учёба; занятие",
+      "printed_page": 31,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "gymnastique",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "гимнастика",
+      "printed_page": 31,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "pharmacie",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "аптека",
+      "printed_page": 31,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "bouquet",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "букет",
+      "printed_page": 31,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "matin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "утро",
+      "printed_page": 35,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "faim",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "голод",
+      "printed_page": 35,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "main",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "кисть руки; рука",
+      "printed_page": 35,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "professeur",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "преподаватель",
+      "printed_page": 35,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "médecin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "врач",
+      "printed_page": 35,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "toilette",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "туалет; умывание",
+      "printed_page": 36,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "maison",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "дом",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "rue",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "улица",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "chambre",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "комната",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "cuisine",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "кухня",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "fenêtre",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "окно",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "porte",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "дверь",
+      "printed_page": 42,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "enfant",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "ребёнок",
+      "printed_page": 47,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "frère",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "брат",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        42,
+        48
+      ]
+    },
+    {
+      "lemma": "an",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "год (возраст)",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "langue",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "язык",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "français",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "французский язык",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "russe",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "русский язык",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "allemand",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "немецкий язык",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "anglais",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "английский язык",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "campagne",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "деревня; сельская местность",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "usine",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "завод; фабрика",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "vie",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "жизнь",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "travail",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "работа",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "famille",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "семья",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "ami",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "друг",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "chanson",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "песня",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "sport",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "спорт",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "football",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "футбол",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "dimanche",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "воскресенье",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "journal",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "газета; журнал",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        42,
+        53
+      ]
+    },
+    {
+      "lemma": "montagne",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "гора",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "chat",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "кот; кошка",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "jour",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "день",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "dîner",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "ужин",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "note",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "запись; заметка",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "télé",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "телевизор",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "copine",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "подруга",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "école",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "школа",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "leçon",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "урок",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "soir",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "вечер",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "faculté",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "факультет",
+      "printed_page": 31,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "bouquiniste",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "букинист",
+      "printed_page": 31,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "cours",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "занятие; курс",
+      "printed_page": 31,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "pays",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "страна",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "fille",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "дочь; девочка",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "banque",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "банк",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "brune",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "брюнетка",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "école maternelle",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "детский сад",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "fillette",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "девочка",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "maman",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "мама",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "papa",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "папа",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "parent",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "родитель; родственник",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "grand-parent",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "дедушка или бабушка",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "été",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "лето",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "nom",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "фамилия; имя",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "prénom",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "имя",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    }
+  ],
+  "verbs": [
+    {
+      "infinitive": "être",
+      "translation_ru": "быть",
+      "type": "irregular",
+      "tense": "present",
+      "forms": {
+        "je": "suis",
+        "tu": "es",
+        "il/elle": "est"
+      },
+      "printed_pages": [
+        9,
+        21
+      ],
+      "source": "c'est; je suis; tu es; il/elle est"
+    },
+    {
+      "infinitive": "aimer",
+      "translation_ru": "любить; нравиться",
+      "type": "regular -er",
+      "tense": "present",
+      "forms": {
+        "je": "aime",
+        "tu": "aimes",
+        "il/elle": "aime",
+        "ils/elles": "aiment"
+      },
+      "printed_pages": [
+        15,
+        19,
+        20
+      ],
+      "source": "j'aime; tu aimes; il/elle aime; ils/elles aiment"
+    },
+    {
+      "infinitive": "parler",
+      "translation_ru": "говорить; разговаривать",
+      "type": "regular -er",
+      "tense": "present",
+      "forms": {
+        "je": "parle",
+        "tu": "parles",
+        "il/elle": "parle",
+        "ils/elles": "parlent"
+      },
+      "printed_pages": [
+        13,
+        20
+      ],
+      "source": "je parle; tu parles; il/elle parle; ils/elles parlent"
+    },
+    {
+      "infinitive": "fumer",
+      "translation_ru": "курить",
+      "type": "regular -er",
+      "tense": "present",
+      "forms": {
+        "je": "fume",
+        "tu": "fumes",
+        "il/elle": "fume",
+        "ils/elles": "fument"
+      },
+      "printed_pages": [
+        19,
+        20
+      ],
+      "source": "je fume; tu fumes; il/elle fume; ils/elles fument"
+    },
+    {
+      "infinitive": "partir",
+      "translation_ru": "уезжать; уходить",
+      "type": "irregular -ir",
+      "tense": "present",
+      "forms": {
+        "je": "pars",
+        "tu": "pars",
+        "il/elle": "part",
+        "ils/elles": "partent"
+      },
+      "printed_pages": [
+        15,
+        21
+      ],
+      "source": "Marcelle part; je pars; tu pars; il/elle part; ils/elles partent"
+    },
+    {
+      "infinitive": "faire",
+      "translation_ru": "делать",
+      "type": "irregular",
+      "tense": "present",
+      "forms": {
+        "je": "fais",
+        "tu": "fais",
+        "il/elle": "fait"
+      },
+      "printed_page": 21,
+      "source": "que fais-tu; que fait-il; je/tu fais; il/elle fait"
+    },
+    {
+      "infinitive": "lire",
+      "translation_ru": "читать",
+      "type": "irregular -re",
+      "tense": "present",
+      "forms": {
+        "je": "lis",
+        "tu": "lis",
+        "il/elle": "lit",
+        "ils/elles": "lisent"
+      },
+      "printed_page": 21,
+      "source": "je lis; tu lis; il/elle lit; ils/elles lisent"
+    },
+    {
+      "infinitive": "s'appeler",
+      "translation_ru": "зваться; называться",
+      "type": "pronominal regular -er",
+      "tense": "present",
+      "forms": {
+        "je": "m'appelle",
+        "tu": "t'appelles",
+        "il/elle": "s'appelle"
+      },
+      "printed_pages": [
+        13,
+        22
+      ],
+      "source": "je m'appelle; tu t'appelles; elle s'appelle"
+    },
+    {
+      "infinitive": "habiter",
+      "translation_ru": "жить; проживать",
+      "type": "regular -er",
+      "tense": "present",
+      "forms": {
+        "je": "habite",
+        "tu": "habites",
+        "il/elle": "habite"
+      },
+      "printed_pages": [
+        22,
+        24
+      ],
+      "source": "j'habite Minsk; tu habites Minsk; il habite"
+    },
+    {
+      "infinitive": "avoir",
+      "translation_ru": "иметь",
+      "type": "irregular",
+      "tense": "present",
+      "forms": {
+        "il/elle": "a"
+      },
+      "printed_pages": [
+        22,
+        25
+      ],
+      "source": "ma soeur a une amie; Lucie a une soeur"
+    },
+    {
+      "infinitive": "aller",
+      "translation_ru": "идти; ехать",
+      "type": "irregular",
+      "tense": "present",
+      "forms": {
+        "il/elle": "va"
+      },
+      "printed_pages": [
+        13,
+        15
+      ],
+      "source": "elle va a Brest; elle va a Cannes"
+    },
+    {
+      "infinitive": "acheter",
+      "translation_ru": "покупать",
+      "type": "regular -er with stem change",
+      "tense": "present",
+      "forms": {
+        "je": "achète",
+        "il/elle": "achète"
+      },
+      "printed_pages": [
+        23,
+        25
+      ],
+      "source": "il achète; j'achète"
+    },
+    {
+      "infinitive": "répéter",
+      "translation_ru": "повторять",
+      "type": "accent change -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "fêter",
+      "translation_ru": "праздновать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "déménager",
+      "translation_ru": "переезжать",
+      "type": "spelling change -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "sécher",
+      "translation_ru": "сушить; сохнуть",
+      "type": "accent change -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "céder",
+      "translation_ru": "уступать",
+      "type": "accent change -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "rester",
+      "translation_ru": "оставаться",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "savoir",
+      "translation_ru": "знать; уметь",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "déjeuner",
+      "translation_ru": "завтракать; обедать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "dîner",
+      "translation_ru": "ужинать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "étudier",
+      "translation_ru": "учиться; изучать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 31,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "rire",
+      "translation_ru": "смеяться",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "dire",
+      "translation_ru": "говорить; сказать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "venir",
+      "translation_ru": "приходить; приезжать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "apprendre",
+      "translation_ru": "учить; изучать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "comprendre",
+      "translation_ru": "понимать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "prendre",
+      "translation_ru": "брать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "écrire",
+      "translation_ru": "писать",
+      "type": "irregular",
+      "tense": "present",
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "3",
+      "printed_pages": [
+        49,
+        52
+      ]
+    },
+    {
+      "infinitive": "commencer",
+      "translation_ru": "начинать",
+      "type": "spelling change -er",
+      "tense": "present",
+      "printed_page": 49,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "travailler",
+      "translation_ru": "работать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "entrer",
+      "translation_ru": "входить",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "tomber",
+      "translation_ru": "падать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 50,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "regarder",
+      "translation_ru": "смотреть",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "chanter",
+      "translation_ru": "петь",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "quitter",
+      "translation_ru": "покидать; оставлять",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 31,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "revenir",
+      "translation_ru": "возвращаться",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "relire",
+      "translation_ru": "перечитывать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "tricoter",
+      "translation_ru": "вязать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "jouer",
+      "translation_ru": "играть",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "servir",
+      "translation_ru": "служить; подавать",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "répondre",
+      "translation_ru": "отвечать",
+      "type": "irregular -re",
+      "tense": "present",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52",
+      "conjugation_group": "3"
+    },
+    {
+      "infinitive": "passer",
+      "translation_ru": "проводить (время); проходить",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52",
+      "conjugation_group": "1"
+    },
+    {
+      "infinitive": "danser",
+      "translation_ru": "танцевать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52",
+      "conjugation_group": "1"
+    }
+  ],
+  "adjectives": [
+    {
+      "lemma": "clair",
+      "feminine": "claire",
+      "translation_ru": "светлый; ясный",
+      "printed_page": 10
+    },
+    {
+      "lemma": "cher",
+      "feminine": "chère",
+      "translation_ru": "дорогой",
+      "printed_page": 12
+    },
+    {
+      "lemma": "beau",
+      "feminine": "belle",
+      "translation_ru": "красивый",
+      "printed_pages": [
+        12,
+        52
+      ],
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "jeune",
+      "translation_ru": "молодой",
+      "printed_pages": [
+        15,
+        52
+      ],
+      "feminine": "jeune",
+      "printed_page": 52,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "malade",
+      "translation_ru": "больной",
+      "printed_page": 15
+    },
+    {
+      "lemma": "russe",
+      "translation_ru": "русский",
+      "printed_pages": [
+        20,
+        21
+      ]
+    },
+    {
+      "lemma": "bulgare",
+      "translation_ru": "болгарский",
+      "printed_page": 21
+    },
+    {
+      "lemma": "grec",
+      "feminine": "grecque",
+      "translation_ru": "греческий",
+      "printed_page": 20
+    },
+    {
+      "lemma": "arabe",
+      "translation_ru": "арабский",
+      "printed_page": 20
+    },
+    {
+      "lemma": "artistique",
+      "translation_ru": "артистический; художественный",
+      "printed_page": 22
+    },
+    {
+      "lemma": "bleu",
+      "feminine": "bleue",
+      "translation_ru": "синий",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "célèbre",
+      "feminine": "célèbre",
+      "translation_ru": "знаменитый",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "brun",
+      "feminine": "brune",
+      "translation_ru": "каштановый; смуглый",
+      "printed_page": 34,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "petit",
+      "feminine": "petite",
+      "translation_ru": "маленький",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        42,
+        52
+      ]
+    },
+    {
+      "lemma": "grand",
+      "feminine": "grande",
+      "translation_ru": "большой; высокий",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        52
+      ]
+    },
+    {
+      "lemma": "joli",
+      "feminine": "jolie",
+      "translation_ru": "красивый; милый",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        52
+      ]
+    },
+    {
+      "lemma": "bon",
+      "feminine": "bonne",
+      "translation_ru": "хороший",
+      "printed_page": 52,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "mauvais",
+      "feminine": "mauvaise",
+      "translation_ru": "плохой",
+      "printed_page": 52,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "nouveau",
+      "feminine": "nouvelle",
+      "translation_ru": "новый",
+      "printed_page": 52,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "vieux",
+      "feminine": "vieille",
+      "translation_ru": "старый",
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        52
+      ]
+    },
+    {
+      "lemma": "français",
+      "feminine": "française",
+      "translation_ru": "французский; француз",
+      "printed_page": 53,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "allemand",
+      "feminine": "allemande",
+      "translation_ru": "немецкий; немец",
+      "printed_page": 55,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "anglais",
+      "feminine": "anglaise",
+      "translation_ru": "английский; англичанин",
+      "printed_page": 55,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "lemma": "seul",
+      "feminine": "seule",
+      "translation_ru": "один; единственный",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "chaque",
+      "feminine": "chaque",
+      "translation_ru": "каждый",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "lemma": "métallurgique",
+      "feminine": "métallurgique",
+      "translation_ru": "металлургический",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "maternel",
+      "feminine": "maternelle",
+      "translation_ru": "материнский; детский (о школе)",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "gai",
+      "feminine": "gaie",
+      "translation_ru": "весёлый",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "gentil",
+      "feminine": "gentille",
+      "translation_ru": "милый",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    }
+  ],
+  "function_words_and_phrases": [
+    {
+      "text": "c'est",
+      "translation_ru": "это; это есть",
+      "type": "phrase",
+      "printed_page": 11
+    },
+    {
+      "text": "c'est vrai",
+      "translation_ru": "это правда",
+      "type": "phrase",
+      "printed_page": 15
+    },
+    {
+      "text": "qu'est-ce que c'est ?",
+      "translation_ru": "что это такое?",
+      "type": "question",
+      "printed_page": 19
+    },
+    {
+      "text": "que fait ... ?",
+      "translation_ru": "что делает ...?",
+      "type": "question",
+      "printed_page": 14
+    },
+    {
+      "text": "avec",
+      "translation_ru": "с",
+      "type": "preposition",
+      "printed_page": 15
+    },
+    {
+      "text": "à",
+      "translation_ru": "в; к; на; указывает направление",
+      "type": "preposition",
+      "printed_pages": [
+        13,
+        15
+      ]
+    },
+    {
+      "text": "de",
+      "translation_ru": "родительный падеж; принадлежность",
+      "type": "preposition",
+      "printed_pages": [
+        22,
+        25
+      ]
+    },
+    {
+      "text": "sur",
+      "translation_ru": "на",
+      "type": "preposition",
+      "printed_page": 22
+    },
+    {
+      "text": "ma",
+      "translation_ru": "моя",
+      "type": "possessive adjective feminine singular",
+      "printed_page": 10
+    },
+    {
+      "text": "ta",
+      "translation_ru": "твоя",
+      "type": "possessive adjective feminine singular",
+      "printed_page": 10
+    },
+    {
+      "text": "sa",
+      "translation_ru": "его/её/своя",
+      "type": "possessive adjective feminine singular",
+      "printed_page": 10
+    },
+    {
+      "text": "cette",
+      "translation_ru": "эта",
+      "type": "demonstrative adjective feminine singular",
+      "printed_pages": [
+        12,
+        20
+      ]
+    },
+    {
+      "text": "ce",
+      "translation_ru": "этот",
+      "type": "demonstrative adjective masculine singular",
+      "printed_page": 20
+    },
+    {
+      "text": "le",
+      "translation_ru": "определенный артикль муж. рода ед. числа",
+      "type": "definite article",
+      "printed_page": 22
+    },
+    {
+      "text": "la",
+      "translation_ru": "определенный артикль жен. рода ед. числа",
+      "type": "definite article",
+      "printed_page": 22
+    },
+    {
+      "text": "l'",
+      "translation_ru": "усеченная форма le/la перед гласным",
+      "type": "definite article elided",
+      "printed_page": 22
+    },
+    {
+      "text": "les",
+      "translation_ru": "определенный артикль мн. числа",
+      "type": "definite article plural",
+      "printed_page": 22
+    },
+    {
+      "text": "un",
+      "translation_ru": "неопределенный артикль муж. рода ед. числа",
+      "type": "indefinite article",
+      "printed_page": 19
+    },
+    {
+      "text": "une",
+      "translation_ru": "неопределенный артикль жен. рода ед. числа",
+      "type": "indefinite article",
+      "printed_page": 19
+    },
+    {
+      "text": "mardi",
+      "translation_ru": "вторник; во вторник",
+      "type": "adverb/noun",
+      "printed_page": 22
+    },
+    {
+      "text": "mes",
+      "translation_ru": "мои",
+      "type": "possessive adjective plural",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "tes",
+      "translation_ru": "твои",
+      "type": "possessive adjective plural",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "ses",
+      "translation_ru": "его; её; свои",
+      "type": "possessive adjective plural",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "et",
+      "translation_ru": "и",
+      "type": "conjunction",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "chez",
+      "translation_ru": "у; к (кому-либо)",
+      "type": "preposition",
+      "printed_page": 26,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "nous",
+      "translation_ru": "мы; нас",
+      "type": "personal pronoun",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "vous",
+      "translation_ru": "вы; вас",
+      "type": "personal pronoun",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "ils",
+      "translation_ru": "они (м. р.)",
+      "type": "personal pronoun",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "elles",
+      "translation_ru": "они (ж. р.)",
+      "type": "personal pronoun",
+      "printed_page": 28,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "quelle heure est-il ?",
+      "translation_ru": "который час?",
+      "type": "question phrase",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "à quelle heure ?",
+      "translation_ru": "в котором часу?",
+      "type": "question phrase",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "il est une heure",
+      "translation_ru": "сейчас час",
+      "type": "time expression",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "et demie",
+      "translation_ru": "половина (после часа)",
+      "type": "time expression",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "et quart",
+      "translation_ru": "четверть (после часа)",
+      "type": "time expression",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "moins le quart",
+      "translation_ru": "без четверти",
+      "type": "time expression",
+      "printed_page": 30,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "mon",
+      "translation_ru": "мой",
+      "type": "possessive adjective masculine singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "ton",
+      "translation_ru": "твой",
+      "type": "possessive adjective masculine singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "son",
+      "translation_ru": "его; её; свой",
+      "type": "possessive adjective masculine singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "notre",
+      "translation_ru": "наш",
+      "type": "possessive adjective singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "votre",
+      "translation_ru": "ваш",
+      "type": "possessive adjective singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "leur",
+      "translation_ru": "их; свой",
+      "type": "possessive adjective singular",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "nos",
+      "translation_ru": "наши",
+      "type": "possessive adjective plural",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "vos",
+      "translation_ru": "ваши",
+      "type": "possessive adjective plural",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "leurs",
+      "translation_ru": "их; свои",
+      "type": "possessive adjective plural",
+      "printed_page": 38,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "ne ... pas",
+      "translation_ru": "не",
+      "type": "negation",
+      "printed_page": 40,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "pas du tout",
+      "translation_ru": "совсем нет; вовсе не",
+      "type": "phrase",
+      "printed_page": 40,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "dans",
+      "translation_ru": "в",
+      "type": "preposition",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "en",
+      "translation_ru": "на; в",
+      "type": "preposition",
+      "printed_page": 49,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "comment ?",
+      "translation_ru": "как?",
+      "type": "question word",
+      "printed_page": 48,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "où ?",
+      "translation_ru": "где?; куда?",
+      "type": "question word",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "que ?",
+      "translation_ru": "что?",
+      "type": "question word",
+      "printed_page": 51,
+      "source": "manual image review, printed pages 25-56"
+    },
+    {
+      "text": "moi",
+      "type": "personal pronoun",
+      "translation_ru": "я; меня; мне",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "toi",
+      "type": "personal pronoun",
+      "translation_ru": "ты; тебя; тебе",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "lui",
+      "type": "personal pronoun",
+      "translation_ru": "он; ему",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "qui ?",
+      "type": "question word",
+      "translation_ru": "кто?",
+      "printed_page": 41,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "vite",
+      "type": "adverb",
+      "translation_ru": "быстро",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "chaque jour",
+      "type": "time expression",
+      "translation_ru": "каждый день",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "à table !",
+      "type": "phrase",
+      "translation_ru": "к столу!",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "faire le café",
+      "type": "phrase",
+      "translation_ru": "готовить кофе",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "être servi",
+      "type": "phrase",
+      "translation_ru": "быть поданным",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "nous sommes six",
+      "type": "phrase",
+      "translation_ru": "нас шестеро",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "mes notes",
+      "type": "possessive phrase",
+      "translation_ru": "мои записи",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "son journal",
+      "type": "possessive phrase",
+      "translation_ru": "его газета",
+      "printed_page": 42,
+      "source": "Слова к тексту, печатная страница 42"
+    },
+    {
+      "text": "mon ami",
+      "type": "possessive phrase",
+      "translation_ru": "мой друг",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "notre pays",
+      "type": "possessive phrase",
+      "translation_ru": "наша страна",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "il m'écrit",
+      "type": "phrase",
+      "translation_ru": "он мне пишет",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "je lui réponds",
+      "type": "phrase",
+      "translation_ru": "я ему отвечаю",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "parce que",
+      "type": "conjunction",
+      "translation_ru": "потому что",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "bonjour",
+      "type": "phrase",
+      "translation_ru": "здравствуй; здравствуйте",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "pardon",
+      "type": "phrase",
+      "translation_ru": "извини; извините",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "souvent",
+      "type": "adverb",
+      "translation_ru": "часто",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "on y danse",
+      "type": "phrase",
+      "translation_ru": "там танцуют",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "tous",
+      "type": "personal pronoun",
+      "translation_ru": "все",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "danser en rond",
+      "type": "phrase",
+      "translation_ru": "водить хоровод",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "pourquoi ?",
+      "type": "question word",
+      "translation_ru": "почему?",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "à la campagne",
+      "type": "phrase",
+      "translation_ru": "за городом; на даче",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "votre nom",
+      "type": "possessive phrase",
+      "translation_ru": "ваша фамилия",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "votre prénom",
+      "type": "possessive phrase",
+      "translation_ru": "ваше имя",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    }
+  ],
+  "proper_names": [
+    {
+      "text": "Marc",
+      "type": "person",
+      "printed_page": 15
+    },
+    {
+      "text": "Anne",
+      "type": "person",
+      "printed_page": 15
+    },
+    {
+      "text": "Marcelle",
+      "type": "person",
+      "printed_page": 15
+    },
+    {
+      "text": "Claire",
+      "type": "person",
+      "printed_page": 12
+    },
+    {
+      "text": "Lucie",
+      "type": "person",
+      "printed_page": 22
+    },
+    {
+      "text": "Mylène",
+      "type": "person",
+      "printed_page": 22
+    },
+    {
+      "text": "Michel",
+      "type": "person",
+      "printed_pages": [
+        22,
+        24
+      ]
+    },
+    {
+      "text": "Minsk",
+      "type": "place",
+      "translation_ru": "Минск",
+      "printed_page": 22
+    },
+    {
+      "text": "Brest",
+      "type": "place",
+      "translation_ru": "Брест",
+      "printed_page": 13
+    },
+    {
+      "text": "Cannes",
+      "type": "place",
+      "translation_ru": "Канны",
+      "printed_page": 13
+    },
+    {
+      "text": "Paris",
+      "type": "place",
+      "translation_ru": "Париж",
+      "printed_page": 23
+    },
+    {
+      "text": "Avignon",
+      "translation_ru": "Авиньон",
+      "type": "place",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "le Pont d'Avignon",
+      "translation_ru": "Авиньонский мост",
+      "type": "place",
+      "printed_page": 52,
+      "source": "Слова к тексту, печатная страница 52"
+    }
+  ]
+}
