@@ -440,6 +440,8 @@ function grammarTables() {
 function pronounTables() {
   return [
     personalPronounTable(),
+    objectPronounOrderTable(),
+    doublePronounOrderTable(),
     possessivePronounTable(),
     demonstrativePronounTable(),
     compactPronounList("Прочие местоимения", "из словаря", [
@@ -466,6 +468,43 @@ function personalPronounTable() {
       ["1-е", strong("nous"), strong("nous"), strong("nous")],
       ["2-е", strong("vous"), strong("vous"), strong("vous")],
       ["3-е", `${strong("ils")}<br>${strong("elles")}`, strong("les"), strong("leur")]
+    ]
+  };
+}
+
+function objectPronounOrderTable() {
+  return {
+    title: "Порядок приглагольных местоимений",
+    note: "me, te, le, lui",
+    columns: ["Тип фразы", "Схема", "Пример"],
+    rows: [
+      ["Утверждение", `${strong("подл. + местоим. + глагол")}`, `${strong("je le lis")} - я это читаю`],
+      ["Отрицание", `${strong("ne + местоим. + глагол + pas")}`, `${strong("je ne le lis pas")} - я это не читаю`],
+      ["Вопрос", `${strong("местоим. + глагол-связка")}`, `${strong("le lit-elle ?")} - она это читает?`],
+      ["Приказ, утв.", `${strong("глагол + местоим.")}`, `${strong("lis-le")} - прочитай это`],
+      ["Приказ, отриц.", `${strong("ne + местоим. + глагол + pas")}`, `${strong("ne le lis pas")} - не читай это`]
+    ]
+  };
+}
+
+function doublePronounOrderTable() {
+  return {
+    title: "Если два местоимения",
+    note: "коротко",
+    columns: ["Перед глаголом", "В утвердительном приказе"],
+    rows: [
+      [
+        `${strong("me/te/se/nous/vous")} → ${strong("le/la/les")} → ${strong("lui/leur")}`,
+        `${strong("le/la/les")} → ${strong("moi/toi/lui/nous/vous/leur")}`
+      ],
+      [
+        `${strong("je te le donne")} - я тебе это даю`,
+        `${strong("donne-le-moi")} - дай мне это`
+      ],
+      [
+        `${strong("je ne te le donne pas")} - я тебе это не даю`,
+        `${strong("ne me le donne pas")} - не давай мне это`
+      ]
     ]
   };
 }
