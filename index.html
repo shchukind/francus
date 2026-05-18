@@ -18,7 +18,7 @@
       <nav class="nav" aria-label="Разделы">
         <button class="nav-btn is-active" data-view="dictionary">Словарь</button>
         <button class="nav-btn" data-view="verbs">Глаголы</button>
-        <button class="nav-btn" data-view="pronouns">Местоимения</button>
+        <button class="nav-btn" data-view="grammar">Грамматика</button>
         <button class="nav-btn" data-view="calendar">Календарь</button>
         <button class="nav-btn nav-btn-trainer trainer-start" data-view="trainer-gender">Род</button>
         <button class="nav-btn nav-btn-trainer" data-view="trainer-translate">Перевод</button>
@@ -89,8 +89,15 @@
         <div class="verb-grid" id="verbCards"></div>
       </section>
 
-      <section class="view" id="pronounsView">
-        <div class="pronoun-sections" id="pronounSections"></div>
+      <section class="view" id="grammarView">
+        <div class="filters" aria-label="Раздел грамматики">
+          <button class="chip is-active" data-grammar-tab="pronouns">Местоимения</button>
+          <button class="chip" data-grammar-tab="adjectives">Прилагательные</button>
+          <button class="chip" data-grammar-tab="questions">Вопросы</button>
+          <button class="chip" data-grammar-tab="time">Время</button>
+          <button class="chip" data-grammar-tab="constructions">Конструкции</button>
+        </div>
+        <div class="pronoun-sections" id="grammarSections"></div>
       </section>
 
       <section class="view" id="calendarView">
@@ -222,6 +229,6 @@
       </section>
     </div>
 
-    <script src="script.js?v=15"></script>
+    <script src="script.js?v=16"></script>
   </body>
 </html>

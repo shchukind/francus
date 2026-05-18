@@ -6,6 +6,7 @@ const state = {
   dictionaryVerbTypeFilters: new Set(["all"]),
   serviceTypeFilters: new Set(["all"]),
   verbsTypeFilters: new Set(["all"]),
+  grammarTab: "pronouns",
   dictionarySort: "newest",
   verbsSort: "newest",
   calendarTab: "weekdays",
@@ -24,7 +25,7 @@ const weekdays = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "
 const titles = {
   dictionary: ["Словарь", "Лексика до печатной страницы 106"],
   verbs: ["Глаголы", "Формы, которые уже появились в учебнике"],
-  pronouns: ["Местоимения", "Личные, притяжательные и указательные формы"],
+  grammar: ["Грамматика", "Таблицы и конструкции до печатной страницы 106"],
   calendar: ["Календарь", "Дни недели, месяцы и числа"],
   materials: ["Материалы", "Учебник, упражнения и фонетика"],
   "trainer-gender": ["Тренажёр рода", "Выбери un или une"],
@@ -47,7 +48,7 @@ const els = {
   archiveModal: document.querySelector("#archiveModal"),
   archiveList: document.querySelector("#archiveList"),
   archiveClear: document.querySelector("#archiveClearBtn"),
-  pronounSections: document.querySelector("#pronounSections"),
+  grammarSections: document.querySelector("#grammarSections"),
   calendarGrid: document.querySelector("#calendarGrid"),
   verbsSortFilters: document.querySelector("#verbsSortFilters"),
   verbsTypeFilters: document.querySelector("#verbsTypeFilters"),
@@ -136,6 +137,14 @@ function bindEvents() {
     });
   });
 
+  document.querySelectorAll("[data-grammar-tab]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.grammarTab = button.dataset.grammarTab;
+      setActive("[data-grammar-tab]", button);
+      renderGrammar();
+    });
+  });
+
   els.archiveOpen.addEventListener("click", openArchiveModal);
   els.archiveClear.addEventListener("click", restoreAllArchived);
   document.querySelectorAll("[data-close-archive-modal]").forEach((element) => {
@@ -195,7 +204,7 @@ function toViewId(view) {
   return {
     dictionary: "dictionaryView",
     verbs: "verbsView",
-    pronouns: "pronounsView",
+    grammar: "grammarView",
     calendar: "calendarView",
     materials: "materialsView",
     "trainer-gender": "trainerGenderView",
@@ -209,7 +218,7 @@ function renderAll() {
   renderFilterOptions();
   renderDictionary();
   renderVerbs();
-  renderPronouns();
+  renderGrammar();
   renderCalendar();
   renderArchiveCount();
 }
@@ -392,9 +401,9 @@ function renderVerbs() {
   });
 }
 
-function renderPronouns() {
-  const groups = pronounTables();
-  els.pronounSections.innerHTML = groups.map((group) => `
+function renderGrammar() {
+  const groups = grammarTables();
+  els.grammarSections.innerHTML = groups.map((group) => `
     <section class="pronoun-section">
       <div class="pronoun-section-head">
         <h3>${escapeHtml(group.title)}</h3>
@@ -414,6 +423,18 @@ function renderPronouns() {
       </div>
     </section>
   `).join("");
+}
+
+function grammarTables() {
+  const tables = {
+    pronouns: pronounTables,
+    adjectives: adjectiveGrammarTables,
+    questions: questionGrammarTables,
+    time: timeGrammarTables,
+    constructions: constructionGrammarTables
+  };
+
+  return (tables[state.grammarTab] || pronounTables)();
 }
 
 function pronounTables() {
@@ -474,6 +495,114 @@ function demonstrativePronounTable() {
       [strong("ce"), strong("cette"), `<span class="muted-cell">cet</span>`, `<span class="muted-cell">ces</span>`]
     ]
   };
+}
+
+function adjectiveGrammarTables() {
+  return [
+    {
+      title: "Женский род прилагательных",
+      note: "основные модели",
+      columns: ["Муж.", "Жен.", "Значение"],
+      rows: [
+        [strong("grand"), strong("grande"), "большой"],
+        [strong("joli"), strong("jolie"), "хорошенький"],
+        [strong("jeune"), strong("jeune"), "молодой"],
+        [strong("gentil"), strong("gentille"), "милый"],
+        [strong("bleu"), strong("bleue"), "синий"],
+        [strong("bon"), strong("bonne"), "хороший; вкусный"],
+        [strong("nouveau"), strong("nouvelle"), "новый"],
+        [strong("beau"), strong("belle"), "красивый; хороший"],
+        [strong("vieux"), strong("vieille"), "старый"]
+      ]
+    },
+    {
+      title: "Неопределённое прилагательное tout",
+      note: "tout, toute, tous, toutes",
+      columns: ["Число", "Муж.", "Жен."],
+      rows: [
+        ["Ед.", strong("tout"), strong("toute")],
+        ["Мн.", strong("tous"), strong("toutes")]
+      ]
+    },
+    compactPronounList("Примеры с tout", "из уроков", [
+      ["tout le groupe", "вся группа"],
+      ["toute la famille", "вся семья"],
+      ["tous les livres", "все книги"],
+      ["toutes les revues", "все журналы"]
+    ])
+  ];
+}
+
+function questionGrammarTables() {
+  return [
+    compactPronounList("Вопросительные слова", "qui, que, où", [
+      ["qui ?", "кто?"],
+      ["que ?", "что?"],
+      ["où ?", "где? куда?"],
+      ["comment ?", "как? каков?"],
+      ["pourquoi ?", "почему?"],
+      ["quand ?", "когда?"],
+      ["combien ?", "сколько?"],
+      ["quelle heure est-il ?", "который час?"]
+    ]),
+    compactPronounList("Вопросительные конструкции", "из таблиц и примеров", [
+      ["qu'est-ce que c'est ?", "что это?"],
+      ["n'est-ce pas ?", "не правда ли?"],
+      ["se lève-t-elle ?", "она встаёт?"],
+      ["ont-ils ?", "у них есть?"],
+      ["peut-elle ?", "она может?"]
+    ])
+  ];
+}
+
+function timeGrammarTables() {
+  return [
+    compactPronounList("Время на часах", "устойчивые модели", [
+      ["il est une heure", "один час"],
+      ["il est deux heures", "два часа"],
+      ["et demie", "половина"],
+      ["et quart", "четверть после"],
+      ["moins le quart", "без четверти"]
+    ]),
+    compactPronounList("Выражения времени", "без дней недели", [
+      ["aujourd'hui", "сегодня"],
+      ["demain", "завтра"],
+      ["chaque jour", "каждый день"],
+      ["vingt minutes plus tard", "двадцать минут спустя"],
+      ["ce jour-là", "в тот день"],
+      ["de nouveau", "снова"]
+    ])
+  ];
+}
+
+function constructionGrammarTables() {
+  return [
+    compactPronounList("Ближайшее будущее", "aller + infinitif", [
+      ["je vais lire", "я сейчас буду читать"],
+      ["nous allons faire", "мы собираемся сделать"],
+      ["ils vont partir", "они собираются уехать"]
+    ]),
+    compactPronounList("Безличные и погодные конструкции", "il faut, il fait", [
+      ["il faut + infinitif", "нужно сделать что-либо"],
+      ["il fait chaud", "жарко"],
+      ["il fait beau", "хорошая погода"],
+      ["il fait froid", "холодно"],
+      ["il fait mauvais", "плохая погода"],
+      ["il fait doux", "мягкая погода"]
+    ]),
+    compactPronounList("Управление и инфинитив", "частотные модели", [
+      ["parler à", "говорить кому-либо"],
+      ["parler de", "говорить о чём-либо"],
+      ["jouer de la guitare", "играть на гитаре"],
+      ["demander à qn de faire qch", "попросить кого-либо сделать что-либо"],
+      ["donner qch à qn", "дать что-либо кому-либо"],
+      ["refuser de faire qch", "отказаться сделать что-либо"],
+      ["sans + infinitif", "не делая чего-либо"],
+      ["faire connaissance avec qn", "познакомиться с кем-либо"],
+      ["être tiré de", "быть взятым из"],
+      ["aller chercher qn/qch", "пойти за кем-либо/чем-либо"]
+    ])
+  ];
 }
 
 function compactPronounList(title, note, items) {
