@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Francus</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=11" />
+    <link rel="stylesheet" href="styles.css?v=12" />
   </head>
   <body>
     <aside class="sidebar">
@@ -18,6 +18,7 @@
       <nav class="nav" aria-label="Разделы">
         <button class="nav-btn is-active" data-view="dictionary">Словарь</button>
         <button class="nav-btn" data-view="verbs">Глаголы</button>
+        <button class="nav-btn" data-view="calendar">Календарь</button>
         <button class="nav-btn" data-view="trainer-gender">Род</button>
         <button class="nav-btn" data-view="trainer-translate">Перевод</button>
         <button class="nav-btn" data-view="trainer-conjugation">Спряжение</button>
@@ -57,6 +58,7 @@
         <div class="filters secondary-filters" id="dictionaryVerbTypeFilters" aria-label="Фильтр глаголов по спряжению"></div>
         <div class="filters secondary-filters" id="dictionaryServiceTypeFilters" aria-label="Фильтр служебных слов"></div>
         <div class="filters sort-filters" aria-label="Сортировка словаря">
+          <button class="archive-toggle" id="archiveOpenBtn" type="button">Архив <span id="archiveCount">0</span></button>
           <button class="chip is-active" data-dictionary-sort="newest">По новизне</button>
           <button class="chip" data-dictionary-sort="alphabet">По алфавиту</button>
         </div>
@@ -69,6 +71,7 @@
                 <th>Перевод</th>
                 <th>Род / форма</th>
                 <th>Стр.</th>
+                <th></th>
               </tr>
             </thead>
             <tbody id="dictionaryRows"></tbody>
@@ -83,6 +86,15 @@
           <button class="chip" data-verbs-sort="alphabet">По алфавиту</button>
         </div>
         <div class="verb-grid" id="verbCards"></div>
+      </section>
+
+      <section class="view" id="calendarView">
+        <div class="filters" aria-label="Раздел календаря">
+          <button class="chip is-active" data-calendar-tab="weekdays">Дни недели</button>
+          <button class="chip" data-calendar-tab="months">Месяцы</button>
+          <button class="chip" data-calendar-tab="numbers">Числа</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
       </section>
 
       <section class="view" id="materialsView">
@@ -190,6 +202,21 @@
       </section>
     </div>
 
-    <script src="script.js?v=11"></script>
+    <div class="modal" id="archiveModal" hidden>
+      <div class="modal-backdrop" data-close-archive-modal></div>
+      <section class="modal-panel archive-panel" role="dialog" aria-modal="true" aria-labelledby="archiveTitle">
+        <button class="icon-close" type="button" data-close-archive-modal aria-label="Закрыть">×</button>
+        <div class="archive-head">
+          <div>
+            <h3 id="archiveTitle">Архив</h3>
+            <p>Скрытые слова не показываются в словаре.</p>
+          </div>
+          <button class="secondary archive-clear" id="archiveClearBtn" type="button">Вернуть всё</button>
+        </div>
+        <div class="archive-list" id="archiveList"></div>
+      </section>
+    </div>
+
+    <script src="script.js?v=12"></script>
   </body>
 </html>

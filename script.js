@@ -8,6 +8,8 @@ const state = {
   verbsTypeFilters: new Set(["all"]),
   dictionarySort: "newest",
   verbsSort: "newest",
+  calendarTab: "weekdays",
+  archivedWords: new Set(),
   query: "",
   genderItem: null,
   translateItem: null,
@@ -16,10 +18,13 @@ const state = {
 };
 
 const hiddenPhraseTexts = new Set(["le", "la", "l'", "les", "un", "une"]);
+const archiveStorageKey = "francus.archivedWords.v1";
+const weekdays = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 
 const titles = {
   dictionary: ["Словарь", "Лексика до печатной страницы 85"],
   verbs: ["Глаголы", "Формы, которые уже появились в учебнике"],
+  calendar: ["Календарь", "Дни недели, месяцы и числа"],
   materials: ["Материалы", "Учебник, упражнения и фонетика"],
   "trainer-gender": ["Тренажёр рода", "Выбери un или une"],
   "trainer-translate": ["Тренажёр перевода", "Проверь активный словарь"],
@@ -36,6 +41,12 @@ const els = {
   dictionaryNounGenderFilters: document.querySelector("#dictionaryNounGenderFilters"),
   dictionaryVerbTypeFilters: document.querySelector("#dictionaryVerbTypeFilters"),
   dictionaryServiceTypeFilters: document.querySelector("#dictionaryServiceTypeFilters"),
+  archiveOpen: document.querySelector("#archiveOpenBtn"),
+  archiveCount: document.querySelector("#archiveCount"),
+  archiveModal: document.querySelector("#archiveModal"),
+  archiveList: document.querySelector("#archiveList"),
+  archiveClear: document.querySelector("#archiveClearBtn"),
+  calendarGrid: document.querySelector("#calendarGrid"),
   verbsSortFilters: document.querySelector("#verbsSortFilters"),
   verbsTypeFilters: document.querySelector("#verbsTypeFilters"),
   dictionaryRows: document.querySelector("#dictionaryRows"),
@@ -61,6 +72,7 @@ const els = {
 async function init() {
   const response = await fetch("patouchanska_pages_001_025_dataset.json");
   state.data = await response.json();
+  loadArchive();
   enrichVerbForms();
   bindEvents();
   renderAll();
@@ -114,6 +126,20 @@ function bindEvents() {
     });
   });
 
+  document.querySelectorAll("[data-calendar-tab]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.calendarTab = button.dataset.calendarTab;
+      setActive("[data-calendar-tab]", button);
+      renderCalendar();
+    });
+  });
+
+  els.archiveOpen.addEventListener("click", openArchiveModal);
+  els.archiveClear.addEventListener("click", restoreAllArchived);
+  document.querySelectorAll("[data-close-archive-modal]").forEach((element) => {
+    element.addEventListener("click", closeArchiveModal);
+  });
+
   els.search.addEventListener("input", () => {
     state.query = normalizeSearch(els.search.value);
     renderDictionary();
@@ -135,7 +161,10 @@ function bindEvents() {
     card.addEventListener("click", openLocalMaterial);
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeVerbModal();
+    if (event.key === "Escape") {
+      closeVerbModal();
+      closeArchiveModal();
+    }
   });
 
   els.translateInput.addEventListener("keydown", (event) => {
@@ -164,6 +193,7 @@ function toViewId(view) {
   return {
     dictionary: "dictionaryView",
     verbs: "verbsView",
+    calendar: "calendarView",
     materials: "materialsView",
     "trainer-gender": "trainerGenderView",
     "trainer-translate": "trainerTranslateView",
@@ -176,18 +206,23 @@ function renderAll() {
   renderFilterOptions();
   renderDictionary();
   renderVerbs();
+  renderCalendar();
+  renderArchiveCount();
 }
 
 function renderStats() {
   const { nouns, verbs, adjectives, function_words_and_phrases: phrases } = state.data;
-  const visiblePhrases = phrases.filter((item) => !hiddenPhraseTexts.has(item.text));
+  const activeNouns = nouns.filter((item) => !isCalendarNoun(item) && !state.archivedWords.has(itemKey("noun", item.lemma)));
+  const activeVerbs = verbs.filter((item) => !state.archivedWords.has(itemKey("verb", item.infinitive)));
+  const activeAdjectives = adjectives.filter((item) => !state.archivedWords.has(itemKey("adjective", item.lemma)));
+  const visiblePhrases = phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item) && !state.archivedWords.has(itemKey("phrase", item.text)));
   const pageMatch = String(state.data.metadata?.printed_pages_used || "").match(/(\d+)\s*$/);
   const pageLabel = pageMatch ? `до стр. ${pageMatch[1]}` : "текущая база";
   els.dataSource.textContent = `Учебник Потушанской · ${pageLabel}`;
   els.stats.innerHTML = `
-    <div>${nouns.length} существительных</div>
-    <div>${verbs.length} глаголов</div>
-    <div>${adjectives.length} прилагательных</div>
+    <div>${activeNouns.length} существительных</div>
+    <div>${activeVerbs.length} глаголов</div>
+    <div>${activeAdjectives.length} прилагательных</div>
     <div>${visiblePhrases.length} служебных слов и фраз</div>
   `;
 }
@@ -195,8 +230,9 @@ function renderStats() {
 function dictionaryItems() {
   const data = state.data;
   return [
-    ...data.nouns.map((item, index) => ({
+    ...data.nouns.filter((item) => !isCalendarNoun(item)).map((item, index) => ({
       kind: "noun",
+      key: itemKey("noun", item.lemma),
       fr: item.lemma,
       form: nounFormLabel(item),
       translation: item.translation_ru,
@@ -209,6 +245,7 @@ function dictionaryItems() {
     })),
     ...data.verbs.map((item, index) => ({
       kind: "verb",
+      key: itemKey("verb", item.infinitive),
       fr: item.infinitive,
       form: verbFormLabel(item),
       translation: item.translation_ru,
@@ -222,6 +259,7 @@ function dictionaryItems() {
     })),
     ...data.adjectives.map((item, index) => ({
       kind: "adjective",
+      key: itemKey("adjective", item.lemma),
       fr: item.lemma,
       feminine: item.feminine,
       form: "прилагательное",
@@ -232,8 +270,9 @@ function dictionaryItems() {
       sortKey: item.lemma,
       order: data.nouns.length + data.verbs.length + index
     })),
-    ...data.function_words_and_phrases.filter((item) => !hiddenPhraseTexts.has(item.text)).map((item, index) => ({
+    ...data.function_words_and_phrases.filter((item) => !hiddenPhraseTexts.has(item.text) && !isCalendarPhrase(item)).map((item, index) => ({
       kind: "phrase",
+      key: itemKey("phrase", item.text),
       fr: item.text,
       form: phraseTypeLabel(item.type),
       translation: item.translation_ru,
@@ -244,7 +283,7 @@ function dictionaryItems() {
       sortKey: item.text,
       order: data.nouns.length + data.verbs.length + data.adjectives.length + index
     }))
-  ];
+  ].filter((item) => !state.archivedWords.has(item.key));
 }
 
 function renderFilterOptions() {
@@ -279,13 +318,6 @@ function renderFilterOptions() {
 }
 
 function renderDictionary() {
-  const labels = {
-    noun: "сущ.",
-    verb: "глаг.",
-    adjective: "прил.",
-    phrase: "фраза"
-  };
-
   const rows = dictionaryItems()
     .filter((item) => state.dictionaryFilters.has("all") || state.dictionaryFilters.has(item.kind))
     .filter((item) => {
@@ -306,14 +338,18 @@ function renderDictionary() {
         <td class="cell-translation">${escapeHtml(item.translation || "")}</td>
         <td class="cell-form">${escapeHtml(item.form || "")}</td>
         <td class="cell-page">${escapeHtml(String(item.page || ""))}</td>
+        <td class="cell-action"><button class="hide-word-btn" type="button" data-archive-word="${escapeHtml(item.key)}" aria-label="Скрыть ${escapeHtml(item.fr)}">×</button></td>
       </tr>
     `)
     .join("");
 
-  els.dictionaryRows.innerHTML = rows || `<tr><td colspan="5">Ничего не найдено</td></tr>`;
+  els.dictionaryRows.innerHTML = rows || `<tr><td colspan="6">Ничего не найдено</td></tr>`;
   els.dictionaryRows.querySelectorAll("[data-dictionary-verb]").forEach((button) => {
     const verb = state.data.verbs.find((item) => item.infinitive === button.dataset.dictionaryVerb);
     button.addEventListener("click", () => openVerbModal(verb));
+  });
+  els.dictionaryRows.querySelectorAll("[data-archive-word]").forEach((button) => {
+    button.addEventListener("click", () => archiveWord(button.dataset.archiveWord));
   });
   els.dictionaryNounGenderFilters.hidden = !state.dictionaryFilters.has("noun");
   els.dictionaryVerbTypeFilters.hidden = !state.dictionaryFilters.has("verb");
@@ -322,6 +358,7 @@ function renderDictionary() {
 
 function renderVerbs() {
   const verbs = state.data.verbs
+    .filter((verb) => !state.archivedWords.has(itemKey("verb", verb.infinitive)))
     .filter((verb) => state.verbsTypeFilters.has("all") || state.verbsTypeFilters.has(conjugationGroup(verb)))
     .sort(compareVerbItems);
   els.verbCards.innerHTML = verbs.map((verb, index) => `
@@ -351,8 +388,58 @@ function renderVerbs() {
   });
 }
 
+function renderCalendar() {
+  const items = calendarItems()[state.calendarTab] || [];
+  els.calendarGrid.innerHTML = items.map((item) => `
+    <article class="calendar-card calendar-${item.group}">
+      <div class="calendar-word">${escapeHtml(item.fr)}</div>
+      <div class="calendar-translation">${escapeHtml(item.translation)}</div>
+      <div class="calendar-meta">${escapeHtml(item.meta)}</div>
+    </article>
+  `).join("") || `<div class="empty">Пока пусто</div>`;
+}
+
+function calendarItems() {
+  const nounByLemma = new Map(state.data.nouns.map((item) => [item.lemma, item]));
+  const phraseByText = new Map(state.data.function_words_and_phrases.map((item) => [item.text, item]));
+  const weekdayItems = weekdays
+    .map((day) => nounByLemma.get(day) || phraseByText.get(day))
+    .filter(Boolean)
+    .map((item) => ({
+      group: "weekday",
+      fr: item.lemma || item.text,
+      translation: item.translation_ru,
+      meta: pages(item) ? `стр. ${pages(item)}` : "день недели"
+    }));
+  const monthItems = state.data.function_words_and_phrases
+    .filter((item) => item.type === "month")
+    .map((item) => ({
+      group: "month",
+      fr: item.text,
+      translation: item.translation_ru,
+      meta: pages(item) ? `стр. ${pages(item)}` : "месяц"
+    }));
+  const numberItems = state.data.function_words_and_phrases
+    .filter((item) => item.type === "numeral")
+    .map((item) => ({
+      group: "number",
+      fr: item.text,
+      translation: item.translation_ru,
+      meta: pages(item) ? `стр. ${pages(item)}` : "числительное"
+    }));
+  return {
+    weekdays: weekdayItems,
+    months: monthItems,
+    numbers: numberItems
+  };
+}
+
 function nextGender() {
-  const items = state.data.nouns.filter((noun) => noun.indefinite_article === "un" || noun.indefinite_article === "une");
+  const items = state.data.nouns.filter((noun) => (
+    (noun.indefinite_article === "un" || noun.indefinite_article === "une") &&
+    !isCalendarNoun(noun) &&
+    !state.archivedWords.has(itemKey("noun", noun.lemma))
+  ));
   state.genderItem = sample(items);
   els.genderPrompt.textContent = `___ ${state.genderItem.lemma}`;
   els.genderTranslation.textContent = state.genderItem.translation_ru;
@@ -371,9 +458,15 @@ function checkGender(answer) {
 
 function nextTranslate() {
   const items = [
-    ...state.data.nouns.map((item) => ({ fr: displayNoun(item), ru: item.translation_ru })),
-    ...state.data.verbs.map((item) => ({ fr: item.infinitive, ru: item.translation_ru })),
-    ...state.data.adjectives.map((item) => ({ fr: item.lemma, ru: item.translation_ru }))
+    ...state.data.nouns
+      .filter((item) => !isCalendarNoun(item) && !state.archivedWords.has(itemKey("noun", item.lemma)))
+      .map((item) => ({ fr: displayNoun(item), ru: item.translation_ru })),
+    ...state.data.verbs
+      .filter((item) => !state.archivedWords.has(itemKey("verb", item.infinitive)))
+      .map((item) => ({ fr: item.infinitive, ru: item.translation_ru })),
+    ...state.data.adjectives
+      .filter((item) => !state.archivedWords.has(itemKey("adjective", item.lemma)))
+      .map((item) => ({ fr: item.lemma, ru: item.translation_ru }))
   ];
   state.translateItem = sample(items);
   els.translateModeLabel.textContent = state.translateMode === "fr-ru" ? "Французский → русский" : "Русский → французский";
@@ -400,7 +493,7 @@ function checkTranslate() {
 }
 
 function nextConjugation() {
-  const forms = state.data.verbs.flatMap((verb) => {
+  const forms = state.data.verbs.filter((verb) => !state.archivedWords.has(itemKey("verb", verb.infinitive))).flatMap((verb) => {
     return Object.entries(verb.forms).map(([pronoun, form]) => ({ verb, pronoun, form }));
   });
   state.conjugationItem = sample(forms);
@@ -708,6 +801,103 @@ function serviceType(type) {
   if (type === "adverb/noun") return "adverb";
   if (type.includes("adjective") || type === "personal pronoun" || type === "indefinite pronoun" || type === "possessive phrase") return "pronoun";
   return "service";
+}
+
+function itemKey(kind, text) {
+  return `${kind}:${normalizeSearch(text)}`;
+}
+
+function isCalendarNoun(item) {
+  return weekdays.includes(item.lemma);
+}
+
+function isCalendarPhrase(item) {
+  return item.type === "month" || item.type === "numeral" || weekdays.includes(item.text);
+}
+
+function archiveWord(key) {
+  state.archivedWords.add(key);
+  saveArchive();
+  renderStats();
+  renderDictionary();
+  renderVerbs();
+  renderArchiveCount();
+}
+
+function restoreArchivedWord(key) {
+  state.archivedWords.delete(key);
+  saveArchive();
+  renderStats();
+  renderDictionary();
+  renderVerbs();
+  renderArchiveCount();
+  renderArchiveList();
+}
+
+function restoreAllArchived() {
+  state.archivedWords.clear();
+  saveArchive();
+  renderStats();
+  renderDictionary();
+  renderVerbs();
+  renderArchiveCount();
+  renderArchiveList();
+}
+
+function openArchiveModal() {
+  renderArchiveList();
+  els.archiveModal.hidden = false;
+}
+
+function closeArchiveModal() {
+  els.archiveModal.hidden = true;
+}
+
+function renderArchiveCount() {
+  els.archiveCount.textContent = String(state.archivedWords.size);
+  els.archiveOpen.classList.toggle("has-items", state.archivedWords.size > 0);
+}
+
+function renderArchiveList() {
+  const index = dictionaryIndex();
+  const items = [...state.archivedWords].map((key) => index.get(key)).filter(Boolean);
+  els.archiveClear.hidden = !items.length;
+  els.archiveList.innerHTML = items.map((item) => `
+    <div class="archive-item">
+      <div>
+        <strong>${escapeHtml(item.fr)}</strong>
+        <span>${escapeHtml(item.typeTag)} · ${escapeHtml(item.translation || "")}</span>
+      </div>
+      <button class="secondary" type="button" data-restore-word="${escapeHtml(item.key)}">Вернуть</button>
+    </div>
+  `).join("") || `<div class="empty">Архив пуст</div>`;
+  els.archiveList.querySelectorAll("[data-restore-word]").forEach((button) => {
+    button.addEventListener("click", () => restoreArchivedWord(button.dataset.restoreWord));
+  });
+}
+
+function dictionaryIndex() {
+  const index = new Map();
+  const previousArchive = state.archivedWords;
+  state.archivedWords = new Set();
+  dictionaryItems().forEach((item) => index.set(item.key, item));
+  state.archivedWords = previousArchive;
+  return index;
+}
+
+function loadArchive() {
+  if (typeof localStorage === "undefined") return;
+  try {
+    const values = JSON.parse(localStorage.getItem(archiveStorageKey) || "[]");
+    state.archivedWords = new Set(Array.isArray(values) ? values : []);
+  } catch {
+    state.archivedWords = new Set();
+  }
+}
+
+function saveArchive() {
+  if (typeof localStorage === "undefined") return;
+  localStorage.setItem(archiveStorageKey, JSON.stringify([...state.archivedWords]));
 }
 
 function renderVerbForms(verb) {
