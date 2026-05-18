@@ -948,8 +948,17 @@ function completePresentForms(verb) {
 
 function checkConjugation() {
   const expected = state.conjugationItem.form;
-  const ok = normalize(els.conjugationInput.value) === normalize(expected);
-  setFeedback(els.conjugationFeedback, ok ? `Верно: ${expected}` : `Правильно: ${expected}`, ok);
+  const user = els.conjugationInput.value;
+  const strictOk = strictNormalize(user) === strictNormalize(expected);
+  const looseOk = looseNormalize(user) === looseNormalize(expected);
+
+  if (strictOk) {
+    setFeedback(els.conjugationFeedback, `Верно: ${expected}`, true);
+  } else if (looseOk) {
+    setFeedback(els.conjugationFeedback, `Верно, но обратите внимание на акценты: ${expected}`, true);
+  } else {
+    setFeedback(els.conjugationFeedback, `Правильно: ${expected}`, false);
+  }
   state.conjugationChecked = true;
 }
 
