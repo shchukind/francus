@@ -22,7 +22,7 @@ const archiveStorageKey = "francus.archivedWords.v1";
 const weekdays = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 
 const titles = {
-  dictionary: ["Словарь", "Лексика до печатной страницы 85"],
+  dictionary: ["Словарь", "Лексика до печатной страницы 106"],
   verbs: ["Глаголы", "Формы, которые уже появились в учебнике"],
   pronouns: ["Местоимения", "Личные, притяжательные и указательные формы"],
   calendar: ["Календарь", "Дни недели, месяцы и числа"],
@@ -631,6 +631,15 @@ function enrichVerbForms() {
 }
 
 function completePresentForms(verb) {
+  const pronominal = (forms) => ({
+    "je": `${startsWithVowel(forms.je) ? "m'" : "me "}${forms.je}`,
+    "tu": `${startsWithVowel(forms.tu) ? "t'" : "te "}${forms.tu}`,
+    "il/elle": `${startsWithVowel(forms["il/elle"]) ? "s'" : "se "}${forms["il/elle"]}`,
+    "nous": `nous ${forms.nous}`,
+    "vous": `vous ${forms.vous}`,
+    "ils/elles": `${startsWithVowel(forms["ils/elles"]) ? "s'" : "se "}${forms["ils/elles"]}`
+  });
+
   const known = {
     "être": { "je": "suis", "tu": "es", "il/elle": "est", "nous": "sommes", "vous": "êtes", "ils/elles": "sont" },
     "avoir": { "je": "ai", "tu": "as", "il/elle": "a", "nous": "avons", "vous": "avez", "ils/elles": "ont" },
@@ -658,6 +667,34 @@ function completePresentForms(verb) {
     "vouloir": { "je": "veux", "tu": "veux", "il/elle": "veut", "nous": "voulons", "vous": "voulez", "ils/elles": "veulent" },
     "pouvoir": { "je": "peux", "tu": "peux", "il/elle": "peut", "nous": "pouvons", "vous": "pouvez", "ils/elles": "peuvent" },
     "voir": { "je": "vois", "tu": "vois", "il/elle": "voit", "nous": "voyons", "vous": "voyez", "ils/elles": "voient" },
+    "mettre": { "je": "mets", "tu": "mets", "il/elle": "met", "nous": "mettons", "vous": "mettez", "ils/elles": "mettent" },
+    "perdre": { "je": "perds", "tu": "perds", "il/elle": "perd", "nous": "perdons", "vous": "perdez", "ils/elles": "perdent" },
+    "devoir": { "je": "dois", "tu": "dois", "il/elle": "doit", "nous": "devons", "vous": "devez", "ils/elles": "doivent" },
+    "ouvrir": { "je": "ouvre", "tu": "ouvres", "il/elle": "ouvre", "nous": "ouvrons", "vous": "ouvrez", "ils/elles": "ouvrent" },
+    "courir": { "je": "cours", "tu": "cours", "il/elle": "court", "nous": "courons", "vous": "courez", "ils/elles": "courent" },
+    "attendre": { "je": "attends", "tu": "attends", "il/elle": "attend", "nous": "attendons", "vous": "attendez", "ils/elles": "attendent" },
+    "entendre": { "je": "entends", "tu": "entends", "il/elle": "entend", "nous": "entendons", "vous": "entendez", "ils/elles": "entendent" },
+    "manger": { "je": "mange", "tu": "manges", "il/elle": "mange", "nous": "mangeons", "vous": "mangez", "ils/elles": "mangent" },
+    "préférer": { "je": "préfère", "tu": "préfères", "il/elle": "préfère", "nous": "préférons", "vous": "préférez", "ils/elles": "préfèrent" },
+    "interpréter": { "je": "interprète", "tu": "interprètes", "il/elle": "interprète", "nous": "interprétons", "vous": "interprétez", "ils/elles": "interprètent" },
+    "promener": { "je": "promène", "tu": "promènes", "il/elle": "promène", "nous": "promenons", "vous": "promenez", "ils/elles": "promènent" },
+    "se lever": pronominal({ "je": "lève", "tu": "lèves", "il/elle": "lève", "nous": "levons", "vous": "levez", "ils/elles": "lèvent" }),
+    "se coucher": pronominal({ "je": "couche", "tu": "couches", "il/elle": "couche", "nous": "couchons", "vous": "couchez", "ils/elles": "couchent" }),
+    "se réveiller": pronominal({ "je": "réveille", "tu": "réveilles", "il/elle": "réveille", "nous": "réveillons", "vous": "réveillez", "ils/elles": "réveillent" }),
+    "se promener": pronominal({ "je": "promène", "tu": "promènes", "il/elle": "promène", "nous": "promenons", "vous": "promenez", "ils/elles": "promènent" }),
+    "s'arrêter": pronominal({ "je": "arrête", "tu": "arrêtes", "il/elle": "arrête", "nous": "arrêtons", "vous": "arrêtez", "ils/elles": "arrêtent" }),
+    "s'installer": pronominal({ "je": "installe", "tu": "installes", "il/elle": "installe", "nous": "installons", "vous": "installez", "ils/elles": "installent" }),
+    "s'amuser": pronominal({ "je": "amuse", "tu": "amuses", "il/elle": "amuse", "nous": "amusons", "vous": "amusez", "ils/elles": "amusent" }),
+    "se passer": pronominal({ "je": "passe", "tu": "passes", "il/elle": "passe", "nous": "passons", "vous": "passez", "ils/elles": "passent" }),
+    "s'habiller": pronominal({ "je": "habille", "tu": "habilles", "il/elle": "habille", "nous": "habillons", "vous": "habillez", "ils/elles": "habillent" }),
+    "se déshabiller": pronominal({ "je": "déshabille", "tu": "déshabilles", "il/elle": "déshabille", "nous": "déshabillons", "vous": "déshabillez", "ils/elles": "déshabillent" }),
+    "se dépêcher": pronominal({ "je": "dépêche", "tu": "dépêches", "il/elle": "dépêche", "nous": "dépêchons", "vous": "dépêchez", "ils/elles": "dépêchent" }),
+    "se laver": pronominal({ "je": "lave", "tu": "laves", "il/elle": "lave", "nous": "lavons", "vous": "lavez", "ils/elles": "lavent" }),
+    "se baigner": pronominal({ "je": "baigne", "tu": "baignes", "il/elle": "baigne", "nous": "baignons", "vous": "baignez", "ils/elles": "baignent" }),
+    "se réunir": pronominal({ "je": "réunis", "tu": "réunis", "il/elle": "réunit", "nous": "réunissons", "vous": "réunissez", "ils/elles": "réunissent" }),
+    "se raser": pronominal({ "je": "rase", "tu": "rases", "il/elle": "rase", "nous": "rasons", "vous": "rasez", "ils/elles": "rasent" }),
+    "s'ouvrir": pronominal({ "je": "ouvre", "tu": "ouvres", "il/elle": "ouvre", "nous": "ouvrons", "vous": "ouvrez", "ils/elles": "ouvrent" }),
+    "se refermer": pronominal({ "je": "referme", "tu": "refermes", "il/elle": "referme", "nous": "refermons", "vous": "refermez", "ils/elles": "referment" }),
     "falloir": { "il/elle": "faut" },
     "pleuvoir": { "il/elle": "pleut" }
   };
@@ -1069,6 +1106,10 @@ function renderVerbForms(verb) {
 function displayPronoun(pronoun, form) {
   if (pronoun === "je" && /^[aeiouyhâàäéèêëîïôöùûü]/i.test(form)) return "j'";
   return pronoun;
+}
+
+function startsWithVowel(value) {
+  return /^[aeiouyhâàäéèêëîïôöùûü]/i.test(value);
 }
 
 function openVerbModal(verb) {
