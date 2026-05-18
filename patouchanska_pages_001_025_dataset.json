@@ -1,9 +1,9 @@
 {
   "metadata": {
     "source_pdf": "C:\\Users\\denis\\OneDrive\\Рабочий стол\\Codex\\Francus\\Учебник Потушанская 2.pdf",
-    "range_requested": "до печатной страницы 56",
-    "pdf_pages_used": "6-55",
-    "printed_pages_used": "7-56",
+    "range_requested": "до печатной страницы 85",
+    "pdf_pages_used": "6-84",
+    "printed_pages_used": "7-85",
     "status": "draft_manual_extraction",
     "notes": [
       "PDF is scanned; no text layer was available.",
@@ -11,9 +11,10 @@
       "Nouns are stored without article in lemma; article and gender are separate for gender drills.",
       "Verb forms contain only forms introduced or clearly used up to printed page 25.",
       "Printed pages 25-56 were imported from scanned PDF page images; pronunciation-only examples are filtered where possible.",
-      "Vocabulary table blocks are now being imported as table rows, not only as selected text words."
+      "Vocabulary table blocks are now being imported as table rows, not only as selected text words.",
+      "Printed pages 57-85 were imported with explicit attention to vocabulary tables, remember blocks, verb tables, days, months, and numerals."
     ],
-    "last_import": "2026-05-18: added vocabulary tables from printed pages 42 and 52 after manual review"
+    "last_import": "2026-05-18: imported vocabulary tables and remember blocks through printed page 85"
   },
   "nouns": [
     {
@@ -136,8 +137,11 @@
       "indefinite_article": "un",
       "gender": "masculine",
       "translation_ru": "фильм",
-      "printed_page": 20,
-      "source": "ce film"
+      "source": "ce film",
+      "printed_pages": [
+        20,
+        73
+      ]
     },
     {
       "lemma": "musique",
@@ -637,8 +641,11 @@
       "indefinite_article": "un",
       "gender": "masculine",
       "translation_ru": "воскресенье",
-      "printed_page": 53,
-      "source": "manual image review, printed pages 25-56"
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        53,
+        59
+      ]
     },
     {
       "lemma": "journal",
@@ -885,6 +892,645 @@
       "translation_ru": "имя",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "dessin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "рисунок",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "peintre",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "художник",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "copain",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "приятель",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "ingénieur",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "инженер",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "écrivain",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "писатель",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cahier",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "тетрадь",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "crayon",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "карандаш",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "lundi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "понедельник",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "voisin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "сосед",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "voisine",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "соседка",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "métier",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "ремесло; профессия",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "homme",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "человек; мужчина",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "musicien",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "музыкант",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "musicienne",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "музыкант; музыкантка",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "vers",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "стихотворение; стих",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "guitare",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "гитара",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "loisir",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "досуг; свободное время",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "portrait",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "портрет",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "employé",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "служащий",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "étudiant",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "студент",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "ouvrier",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "рабочий",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "bibliothèque",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "библиотека",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "nuit",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "ночь",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "après-midi",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "время после полудня; день",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "mardi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "вторник",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "mercredi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "среда",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "jeudi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "четверг",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "vendredi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "пятница",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "samedi",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "суббота",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "week-end",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "выходные",
+      "printed_page": 67,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cadeau",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "подарок",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "auto",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "автомобиль",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "métro",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "метро",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "dos",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "спина",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "héros",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "герой",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "kilo",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "килограмм",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "rôle",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "роль",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "pôle",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "полюс",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "côté",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "сторона",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "dôme",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "купол",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "rose",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "роза",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "chose",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "вещь",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "temps",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "погода; время",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "fils",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "сын",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "théâtre",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "театр",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "musée",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "музей",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "exposition",
+      "definite_article": "l'",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "выставка",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "vacances",
+      "definite_article": "les",
+      "indefinite_article": "des",
+      "gender": "feminine",
+      "translation_ru": "каникулы; отпуск",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "août",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "август",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "jardin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "сад",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "tableau",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "картина; таблица",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "drapeau",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "флаг",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "chapeau",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "шляпа",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "jeu",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "игра",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "couleur",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "цвет",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "automne",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "осень",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "feuille",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "лист",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "nuage",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "облако",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "sortie",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "выход",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "promenade",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "прогулка",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "ciel",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "небо",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "impressionniste",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "художник-импрессионист",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "magasin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "магазин",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "lycée",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "лицей",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "collège",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "коллеж",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "fabrique",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "фабрика",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "marché",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "рынок",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cousin",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "двоюродный брат",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cousine",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "двоюродная сестра",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "hiver",
+      "definite_article": "l'",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "зима",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "printemps",
+      "definite_article": "le",
+      "indefinite_article": "un",
+      "gender": "masculine",
+      "translation_ru": "весна",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     }
   ],
   "verbs": [
@@ -1082,7 +1728,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "fêter",
@@ -1091,7 +1737,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "déménager",
@@ -1100,7 +1746,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "sécher",
@@ -1109,7 +1755,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "céder",
@@ -1118,7 +1764,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "rester",
@@ -1127,7 +1773,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "savoir",
@@ -1136,7 +1782,7 @@
       "tense": "present",
       "printed_page": 26,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "déjeuner",
@@ -1145,7 +1791,7 @@
       "tense": "present",
       "printed_page": 28,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "dîner",
@@ -1154,7 +1800,7 @@
       "tense": "present",
       "printed_page": 28,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "étudier",
@@ -1163,7 +1809,7 @@
       "tense": "present",
       "printed_page": 31,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "rire",
@@ -1172,7 +1818,7 @@
       "tense": "present",
       "printed_page": 38,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "dire",
@@ -1181,7 +1827,7 @@
       "tense": "present",
       "printed_page": 38,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "venir",
@@ -1190,7 +1836,7 @@
       "tense": "present",
       "printed_page": 38,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "apprendre",
@@ -1199,7 +1845,7 @@
       "tense": "present",
       "printed_page": 48,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "comprendre",
@@ -1208,7 +1854,7 @@
       "tense": "present",
       "printed_page": 48,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "prendre",
@@ -1217,7 +1863,7 @@
       "tense": "present",
       "printed_page": 48,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "écrire",
@@ -1225,7 +1871,7 @@
       "type": "irregular",
       "tense": "present",
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "3",
+      "conjugation_group": 3,
       "printed_pages": [
         49,
         52
@@ -1238,7 +1884,7 @@
       "tense": "present",
       "printed_page": 49,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "travailler",
@@ -1247,7 +1893,7 @@
       "tense": "present",
       "printed_page": 50,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "entrer",
@@ -1256,7 +1902,7 @@
       "tense": "present",
       "printed_page": 50,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "tomber",
@@ -1265,7 +1911,7 @@
       "tense": "present",
       "printed_page": 50,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "regarder",
@@ -1274,7 +1920,7 @@
       "tense": "present",
       "printed_page": 53,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "chanter",
@@ -1283,7 +1929,7 @@
       "tense": "present",
       "printed_page": 53,
       "source": "manual image review, printed pages 25-56",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "quitter",
@@ -1292,7 +1938,7 @@
       "tense": "present",
       "printed_page": 31,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "revenir",
@@ -1301,7 +1947,7 @@
       "tense": "present",
       "printed_page": 42,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "relire",
@@ -1310,7 +1956,7 @@
       "tense": "present",
       "printed_page": 41,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "tricoter",
@@ -1319,7 +1965,7 @@
       "tense": "present",
       "printed_page": 42,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "jouer",
@@ -1328,7 +1974,7 @@
       "tense": "present",
       "printed_page": 42,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "servir",
@@ -1337,7 +1983,7 @@
       "tense": "present",
       "printed_page": 42,
       "source": "Слова к тексту, печатная страница 42",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "répondre",
@@ -1346,7 +1992,7 @@
       "tense": "present",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52",
-      "conjugation_group": "3"
+      "conjugation_group": 3
     },
     {
       "infinitive": "passer",
@@ -1355,7 +2001,7 @@
       "tense": "present",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52",
-      "conjugation_group": "1"
+      "conjugation_group": 1
     },
     {
       "infinitive": "danser",
@@ -1364,7 +2010,133 @@
       "tense": "present",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52",
-      "conjugation_group": "1"
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "téléphoner",
+      "translation_ru": "звонить по телефону",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 66,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "écouter",
+      "translation_ru": "слушать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "vouloir",
+      "translation_ru": "хотеть",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 3
+    },
+    {
+      "infinitive": "pouvoir",
+      "translation_ru": "мочь",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 3
+    },
+    {
+      "infinitive": "pleuvoir",
+      "translation_ru": "идти (о дожде)",
+      "type": "impersonal irregular",
+      "tense": "present",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 3
+    },
+    {
+      "infinitive": "neiger",
+      "translation_ru": "идти (о снеге)",
+      "type": "impersonal regular -er",
+      "tense": "present",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "falloir",
+      "translation_ru": "быть нужным; следовать",
+      "type": "impersonal irregular",
+      "tense": "present",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 3
+    },
+    {
+      "infinitive": "voir",
+      "translation_ru": "видеть; смотреть",
+      "type": "irregular",
+      "tense": "present",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 3
+    },
+    {
+      "infinitive": "finir",
+      "translation_ru": "кончаться; заканчивать",
+      "type": "regular -ir",
+      "tense": "present",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 2
+    },
+    {
+      "infinitive": "choisir",
+      "translation_ru": "выбирать",
+      "type": "regular -ir",
+      "tense": "present",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 2
+    },
+    {
+      "infinitive": "bâtir",
+      "translation_ru": "строить",
+      "type": "regular -ir",
+      "tense": "present",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 2
+    },
+    {
+      "infinitive": "arriver",
+      "translation_ru": "приходить; приезжать",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "rentrer",
+      "translation_ru": "возвращаться",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "admirer",
+      "translation_ru": "любоваться",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85",
+      "conjugation_group": 1
     }
   ],
   "adjectives": [
@@ -1386,7 +2158,8 @@
       "translation_ru": "красивый",
       "printed_pages": [
         12,
-        52
+        52,
+        71
       ],
       "source": "Слова к тексту, печатная страница 52"
     },
@@ -1417,7 +2190,12 @@
     {
       "lemma": "bulgare",
       "translation_ru": "болгарский",
-      "printed_page": 21
+      "printed_pages": [
+        21,
+        75
+      ],
+      "feminine": "bulgare",
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     },
     {
       "lemma": "grec",
@@ -1439,8 +2217,11 @@
       "lemma": "bleu",
       "feminine": "bleue",
       "translation_ru": "синий",
-      "printed_page": 26,
-      "source": "manual image review, printed pages 25-56"
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        26,
+        76
+      ]
     },
     {
       "lemma": "célèbre",
@@ -1488,8 +2269,11 @@
       "lemma": "bon",
       "feminine": "bonne",
       "translation_ru": "хороший",
-      "printed_page": 52,
-      "source": "manual image review, printed pages 25-56"
+      "source": "manual image review, printed pages 25-56",
+      "printed_pages": [
+        52,
+        62
+      ]
     },
     {
       "lemma": "mauvais",
@@ -1576,6 +2360,181 @@
       "translation_ru": "милый",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "lemma": "polytechnique",
+      "feminine": "polytechnique",
+      "translation_ru": "политехнический",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "mince",
+      "feminine": "mince",
+      "translation_ru": "худощавый; тонкий",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "intelligent",
+      "feminine": "intelligente",
+      "translation_ru": "умный",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "spirituel",
+      "feminine": "spirituelle",
+      "translation_ru": "остроумный",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "marié",
+      "feminine": "mariée",
+      "translation_ru": "женатый; замужем",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "blond",
+      "feminine": "blonde",
+      "translation_ru": "светловолосый",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cadet",
+      "feminine": "cadette",
+      "translation_ru": "младший",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "nerveux",
+      "feminine": "nerveuse",
+      "translation_ru": "нервный",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "délicieux",
+      "feminine": "délicieuse",
+      "translation_ru": "вкусный; восхитительный",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "furieux",
+      "feminine": "furieuse",
+      "translation_ru": "яростный",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "capricieux",
+      "feminine": "capricieuse",
+      "translation_ru": "капризный",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "curieux",
+      "feminine": "curieuse",
+      "translation_ru": "любопытный",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "pluvieux",
+      "feminine": "pluvieuse",
+      "translation_ru": "дождливый",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "orageux",
+      "feminine": "orageuse",
+      "translation_ru": "грозовой",
+      "printed_page": 69,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "chaud",
+      "feminine": "chaude",
+      "translation_ru": "горячий; тёплый",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "doux",
+      "feminine": "douce",
+      "translation_ru": "мягкий; тёплый",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "froid",
+      "feminine": "froide",
+      "translation_ru": "холодный",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "moderne",
+      "feminine": "moderne",
+      "translation_ru": "современный",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "cubain",
+      "feminine": "cubaine",
+      "translation_ru": "кубинский; кубинец",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "blanc",
+      "feminine": "blanche",
+      "translation_ru": "белый",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "rouge",
+      "feminine": "rouge",
+      "translation_ru": "красный",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "jaune",
+      "feminine": "jaune",
+      "translation_ru": "жёлтый",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "content",
+      "feminine": "contente",
+      "translation_ru": "довольный",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "intéressant",
+      "feminine": "intéressante",
+      "translation_ru": "интересный",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "lemma": "gris",
+      "feminine": "grise",
+      "translation_ru": "серый",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     }
   ],
   "function_words_and_phrases": [
@@ -1694,7 +2653,11 @@
       "text": "un",
       "translation_ru": "неопределенный артикль муж. рода ед. числа",
       "type": "indefinite article",
-      "printed_page": 19
+      "printed_pages": [
+        19,
+        82
+      ],
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     },
     {
       "text": "une",
@@ -2113,6 +3076,601 @@
       "translation_ru": "ваше имя",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "futur immédiat",
+      "type": "grammar term",
+      "translation_ru": "ближайшее будущее",
+      "printed_page": 58,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "ensemble",
+      "type": "adverb",
+      "translation_ru": "вместе",
+      "printed_page": 59,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quand ?",
+      "type": "question word",
+      "translation_ru": "когда?",
+      "printed_page": 59,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il y a",
+      "type": "phrase",
+      "translation_ru": "есть; имеется; находится",
+      "printed_page": 59,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quelques",
+      "type": "indefinite adjective",
+      "translation_ru": "несколько",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "comment ça va ?",
+      "type": "phrase",
+      "translation_ru": "как дела?",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "bien",
+      "type": "adverb",
+      "translation_ru": "хорошо",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "ça va bien",
+      "type": "phrase",
+      "translation_ru": "всё в порядке; всё хорошо",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "bon !",
+      "type": "phrase",
+      "translation_ru": "хорошо!",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "d'accord !",
+      "type": "phrase",
+      "translation_ru": "согласен!",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "demain",
+      "type": "adverb",
+      "translation_ru": "завтра",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "à demain",
+      "type": "phrase",
+      "translation_ru": "до завтра",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "faire un portrait",
+      "type": "phrase",
+      "translation_ru": "писать портрет",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "parmi",
+      "type": "preposition",
+      "translation_ru": "среди",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quelqu'un",
+      "type": "indefinite pronoun",
+      "translation_ru": "кто-нибудь",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "dire des vers",
+      "type": "phrase",
+      "translation_ru": "читать стихи",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "jouer de la guitare",
+      "type": "phrase",
+      "translation_ru": "играть на гитаре",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "parfois",
+      "type": "adverb",
+      "translation_ru": "иногда",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "si",
+      "type": "conjunction",
+      "translation_ru": "если",
+      "printed_page": 62,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "aussi",
+      "type": "adverb",
+      "translation_ru": "тоже",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "vingt minutes plus tard",
+      "type": "time expression",
+      "translation_ru": "через двадцать минут",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "devant",
+      "type": "preposition",
+      "translation_ru": "перед",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "vraiment",
+      "type": "adverb",
+      "translation_ru": "действительно",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "beaucoup",
+      "type": "adverb",
+      "translation_ru": "много",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "là",
+      "type": "adverb",
+      "translation_ru": "там",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "surtout",
+      "type": "adverb",
+      "translation_ru": "особенно",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "n'est-ce pas ?",
+      "type": "question phrase",
+      "translation_ru": "не правда ли?",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "aujourd'hui",
+      "type": "adverb",
+      "translation_ru": "сегодня",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il pleut",
+      "type": "phrase",
+      "translation_ru": "идёт дождь",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il fait chaud",
+      "type": "weather phrase",
+      "translation_ru": "жарко",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il fait beau",
+      "type": "weather phrase",
+      "translation_ru": "хорошая погода",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il fait doux",
+      "type": "weather phrase",
+      "translation_ru": "тепло",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il fait froid",
+      "type": "weather phrase",
+      "translation_ru": "холодно",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il fait mauvais",
+      "type": "weather phrase",
+      "translation_ru": "плохая погода",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "il faut",
+      "type": "phrase",
+      "translation_ru": "нужно",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "prendre le métro",
+      "type": "phrase",
+      "translation_ru": "сесть в метро; ехать в метро",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "parler à",
+      "type": "verb construction",
+      "translation_ru": "говорить с...",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "parler de",
+      "type": "verb construction",
+      "translation_ru": "говорить о...",
+      "printed_page": 71,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "aller voir",
+      "type": "phrase",
+      "translation_ru": "посетить; сходить посмотреть",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "combien ?",
+      "type": "question word",
+      "translation_ru": "сколько?",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "beaucoup de",
+      "type": "quantity expression",
+      "translation_ru": "много",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "peu de",
+      "type": "quantity expression",
+      "translation_ru": "мало",
+      "printed_page": 75,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "au",
+      "type": "contracted article",
+      "translation_ru": "à + le",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "aux",
+      "type": "contracted article",
+      "translation_ru": "à + les",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "du",
+      "type": "contracted article",
+      "translation_ru": "de + le",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "des",
+      "type": "contracted article",
+      "translation_ru": "de + les; неопределённый артикль мн. числа",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "euh",
+      "type": "interjection",
+      "translation_ru": "э-э",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "moi aussi",
+      "type": "phrase",
+      "translation_ru": "я тоже",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "décembre",
+      "type": "month",
+      "translation_ru": "декабрь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "janvier",
+      "type": "month",
+      "translation_ru": "январь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "février",
+      "type": "month",
+      "translation_ru": "февраль",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "mars",
+      "type": "month",
+      "translation_ru": "март",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "avril",
+      "type": "month",
+      "translation_ru": "апрель",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "mai",
+      "type": "month",
+      "translation_ru": "май",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "juin",
+      "type": "month",
+      "translation_ru": "июнь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "juillet",
+      "type": "month",
+      "translation_ru": "июль",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "août",
+      "type": "month",
+      "translation_ru": "август",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "septembre",
+      "type": "month",
+      "translation_ru": "сентябрь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "octobre",
+      "type": "month",
+      "translation_ru": "октябрь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "novembre",
+      "type": "month",
+      "translation_ru": "ноябрь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "deux",
+      "type": "numeral",
+      "translation_ru": "два",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "trois",
+      "type": "numeral",
+      "translation_ru": "три",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quatre",
+      "type": "numeral",
+      "translation_ru": "четыре",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "cinq",
+      "type": "numeral",
+      "translation_ru": "пять",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "six",
+      "type": "numeral",
+      "translation_ru": "шесть",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "sept",
+      "type": "numeral",
+      "translation_ru": "семь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "huit",
+      "type": "numeral",
+      "translation_ru": "восемь",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "neuf",
+      "type": "numeral",
+      "translation_ru": "девять",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "dix",
+      "type": "numeral",
+      "translation_ru": "десять",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "onze",
+      "type": "numeral",
+      "translation_ru": "одиннадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "douze",
+      "type": "numeral",
+      "translation_ru": "двенадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "treize",
+      "type": "numeral",
+      "translation_ru": "тринадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quatorze",
+      "type": "numeral",
+      "translation_ru": "четырнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quinze",
+      "type": "numeral",
+      "translation_ru": "пятнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "seize",
+      "type": "numeral",
+      "translation_ru": "шестнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "dix-sept",
+      "type": "numeral",
+      "translation_ru": "семнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "dix-huit",
+      "type": "numeral",
+      "translation_ru": "восемнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "dix-neuf",
+      "type": "numeral",
+      "translation_ru": "девятнадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "vingt",
+      "type": "numeral",
+      "translation_ru": "двадцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "trente",
+      "type": "numeral",
+      "translation_ru": "тридцать",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "quarante",
+      "type": "numeral",
+      "translation_ru": "сорок",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "cinquante",
+      "type": "numeral",
+      "translation_ru": "пятьдесят",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "soixante",
+      "type": "numeral",
+      "translation_ru": "шестьдесят",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "cent",
+      "type": "numeral",
+      "translation_ru": "сто",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "mille",
+      "type": "numeral",
+      "translation_ru": "тысяча",
+      "printed_page": 82,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     }
   ],
   "proper_names": [
@@ -2134,7 +3692,12 @@
     {
       "text": "Claire",
       "type": "person",
-      "printed_page": 12
+      "printed_pages": [
+        12,
+        79
+      ],
+      "translation_ru": "Клер",
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     },
     {
       "text": "Lucie",
@@ -2191,6 +3754,83 @@
       "type": "place",
       "printed_page": 52,
       "source": "Слова к тексту, печатная страница 52"
+    },
+    {
+      "text": "Alain",
+      "translation_ru": "Ален",
+      "type": "person",
+      "printed_page": 63,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "André",
+      "translation_ru": "Андре",
+      "type": "person",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Nicolas",
+      "translation_ru": "Николя",
+      "type": "person",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Pierre",
+      "translation_ru": "Пьер",
+      "type": "person",
+      "printed_page": 72,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Jules",
+      "translation_ru": "Жюль",
+      "type": "person",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Germain",
+      "translation_ru": "Жермен",
+      "type": "person",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Marie",
+      "translation_ru": "Мари",
+      "type": "person",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Jeanne",
+      "translation_ru": "Жанна",
+      "type": "person",
+      "printed_page": 79,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Françoise Sagan",
+      "translation_ru": "Франсуаза Саган",
+      "type": "person",
+      "printed_page": 73,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Musée Pouchkine",
+      "translation_ru": "Музей Пушкина",
+      "type": "place",
+      "printed_page": 76,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
+    },
+    {
+      "text": "Galerie Trétiakov",
+      "translation_ru": "Третьяковская галерея",
+      "type": "place",
+      "printed_page": 70,
+      "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     }
   ]
 }

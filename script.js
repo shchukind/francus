@@ -18,7 +18,7 @@ const state = {
 const hiddenPhraseTexts = new Set(["le", "la", "l'", "les", "un", "une"]);
 
 const titles = {
-  dictionary: ["Словарь", "Лексика до печатной страницы 56"],
+  dictionary: ["Словарь", "Лексика до печатной страницы 85"],
   verbs: ["Глаголы", "Формы, которые уже появились в учебнике"],
   materials: ["Материалы", "Учебник, упражнения и фонетика"],
   "trainer-gender": ["Тренажёр рода", "Выбери un или une"],
@@ -441,7 +441,12 @@ function completePresentForms(verb) {
     "revenir": { "je": "reviens", "tu": "reviens", "il/elle": "revient", "nous": "revenons", "vous": "revenez", "ils/elles": "reviennent" },
     "relire": { "je": "relis", "tu": "relis", "il/elle": "relit", "nous": "relisons", "vous": "relisez", "ils/elles": "relisent" },
     "servir": { "je": "sers", "tu": "sers", "il/elle": "sert", "nous": "servons", "vous": "servez", "ils/elles": "servent" },
-    "commencer": { "je": "commence", "tu": "commences", "il/elle": "commence", "nous": "commençons", "vous": "commencez", "ils/elles": "commencent" }
+    "commencer": { "je": "commence", "tu": "commences", "il/elle": "commence", "nous": "commençons", "vous": "commencez", "ils/elles": "commencent" },
+    "vouloir": { "je": "veux", "tu": "veux", "il/elle": "veut", "nous": "voulons", "vous": "voulez", "ils/elles": "veulent" },
+    "pouvoir": { "je": "peux", "tu": "peux", "il/elle": "peut", "nous": "pouvons", "vous": "pouvez", "ils/elles": "peuvent" },
+    "voir": { "je": "vois", "tu": "vois", "il/elle": "voit", "nous": "voyons", "vous": "voyez", "ils/elles": "voient" },
+    "falloir": { "il/elle": "faut" },
+    "pleuvoir": { "il/elle": "pleut" }
   };
 
   if (known[verb.infinitive]) return known[verb.infinitive];
@@ -465,6 +470,18 @@ function completePresentForms(verb) {
       "nous": "achetons",
       "vous": "achetez",
       "ils/elles": "achètent"
+    };
+  }
+
+  if (conjugationGroup(verb) === "group-2" && verb.infinitive.endsWith("ir")) {
+    const stem = verb.infinitive.slice(0, -2);
+    return {
+      "je": `${stem}is`,
+      "tu": `${stem}is`,
+      "il/elle": `${stem}it`,
+      "nous": `${stem}issons`,
+      "vous": `${stem}issez`,
+      "ils/elles": `${stem}issent`
     };
   }
 
@@ -641,6 +658,16 @@ function phraseTypeLabel(type) {
     adverb: "наречие",
     conjunction: "союз",
     negation: "отрицание",
+    "grammar term": "грамматический термин",
+    "indefinite adjective": "неопределённое прилагательное",
+    "indefinite pronoun": "неопределённое местоимение",
+    "weather phrase": "погода",
+    "verb construction": "глагольная конструкция",
+    "quantity expression": "количество",
+    "contracted article": "слитный артикль",
+    month: "месяц",
+    numeral: "числительное",
+    interjection: "междометие",
     "time expression": "выражение времени",
     "personal pronoun": "личное местоимение",
     "possessive phrase": "притяжательная фраза",
@@ -663,7 +690,9 @@ function phraseKindLabel(type) {
   if (type === "phrase") return "фраза";
   if (type === "question" || type === "question phrase" || type === "question word") return "вопр.";
   if (type === "preposition") return "предл.";
-  if (type === "personal pronoun") return "мест.";
+  if (type === "personal pronoun" || type === "indefinite pronoun") return "мест.";
+  if (type === "numeral") return "числ.";
+  if (type === "month" || type === "time expression") return "время";
   if (type === "adverb") return "нареч.";
   if (type === "adverb/noun") return "нареч.";
   if (type.includes("adjective") || type === "possessive phrase") return "мест.";
@@ -677,7 +706,7 @@ function serviceType(type) {
   if (type === "preposition") return "preposition";
   if (type === "adverb") return "adverb";
   if (type === "adverb/noun") return "adverb";
-  if (type.includes("adjective") || type === "personal pronoun" || type === "possessive phrase") return "pronoun";
+  if (type.includes("adjective") || type === "personal pronoun" || type === "indefinite pronoun" || type === "possessive phrase") return "pronoun";
   return "service";
 }
 
