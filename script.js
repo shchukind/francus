@@ -393,32 +393,22 @@ function renderVerbs() {
 }
 
 function renderPronouns() {
-  const groups = pronounGroups();
+  const groups = pronounTables();
   els.pronounSections.innerHTML = groups.map((group) => `
     <section class="pronoun-section">
       <div class="pronoun-section-head">
         <h3>${escapeHtml(group.title)}</h3>
-        <span>${group.items.length}</span>
+        <span>${escapeHtml(group.note)}</span>
       </div>
       <div class="pronoun-table-wrap">
         <table class="pronoun-table">
           <thead>
             <tr>
-              <th>Форма</th>
-              <th>Перевод</th>
-              <th>Тип</th>
-              <th>Стр.</th>
+              ${group.columns.map((column) => `<th>${escapeHtml(column)}</th>`).join("")}
             </tr>
           </thead>
           <tbody>
-            ${group.items.map((item) => `
-              <tr>
-                <td><strong>${escapeHtml(item.text)}</strong></td>
-                <td>${escapeHtml(item.translation_ru || "")}</td>
-                <td>${escapeHtml(phraseTypeLabel(item.type))}</td>
-                <td>${escapeHtml(String(pages(item) || ""))}</td>
-              </tr>
-            `).join("")}
+            ${group.rows.map((row) => renderPronounRow(row, group.columns.length)).join("")}
           </tbody>
         </table>
       </div>
@@ -426,24 +416,96 @@ function renderPronouns() {
   `).join("");
 }
 
-function pronounGroups() {
-  const items = state.data.function_words_and_phrases.filter(isPronounPhrase);
-  const order = [
-    ["personal", "Личные местоимения"],
-    ["possessive", "Притяжательные"],
-    ["demonstrative", "Указательные"],
-    ["indefinite", "Неопределённые"]
+function pronounTables() {
+  return [
+    personalPronounTable(),
+    possessivePronounTable(),
+    demonstrativePronounTable(),
+    compactPronounList("Прочие местоимения", "из словаря", [
+      ["moi", "я; меня; мне"],
+      ["toi", "ты; тебя; тебе"],
+      ["lui", "он; ему"],
+      ["tous", "все"],
+      ["quelqu'un", "кто-нибудь"]
+    ])
   ];
-  return order.map(([kind, title]) => ({
-    title,
-    items: items.filter((item) => pronounGroup(item.type) === kind).sort(compareByPageThenText)
-  })).filter((group) => group.items.length);
 }
 
-function compareByPageThenText(a, b) {
-  const pageDiff = firstPage({ page: pages(a) }) - firstPage({ page: pages(b) });
-  if (pageDiff !== 0) return pageDiff;
-  return (a.text || "").localeCompare(b.text || "", "fr", { sensitivity: "base" });
+function personalPronounTable() {
+  return {
+    title: "Личные приглагольные местоимения",
+    note: "таблица",
+    columns: ["Лицо", "Подлежащее", "Прямое дополнение", "Косвенное дополнение"],
+    rows: [
+      sectionRow("Единственное число", 4),
+      ["1-е", strong("je"), strong("me"), strong("me")],
+      ["2-е", strong("tu"), strong("te"), strong("te")],
+      ["3-е", `${strong("il")}<br>${strong("elle")}`, `${strong("le")} <span class="pronoun-note">(муж.)</span><br>${strong("la")} <span class="pronoun-note">(жен.)</span>`, `${strong("lui")} <span class="pronoun-note">(муж.)</span><br>${strong("lui")} <span class="pronoun-note">(жен.)</span>`],
+      sectionRow("Множественное число", 4),
+      ["1-е", strong("nous"), strong("nous"), strong("nous")],
+      ["2-е", strong("vous"), strong("vous"), strong("vous")],
+      ["3-е", `${strong("ils")}<br>${strong("elles")}`, strong("les"), strong("leur")]
+    ]
+  };
+}
+
+function possessivePronounTable() {
+  return {
+    title: "Притяжательные прилагательные",
+    note: "mon, ma, mes",
+    columns: ["Лицо", "Муж. ед.", "Жен. ед.", "Мн. число"],
+    rows: [
+      ["1-е ед.", strong("mon"), strong("ma"), strong("mes")],
+      ["2-е ед.", strong("ton"), strong("ta"), strong("tes")],
+      ["3-е ед.", strong("son"), strong("sa"), strong("ses")],
+      ["1-е мн.", strong("notre"), strong("notre"), strong("nos")],
+      ["2-е мн.", strong("votre"), strong("votre"), strong("vos")],
+      ["3-е мн.", strong("leur"), strong("leur"), strong("leurs")]
+    ]
+  };
+}
+
+function demonstrativePronounTable() {
+  return {
+    title: "Указательные прилагательные",
+    note: "ce, cette",
+    columns: ["Муж. ед.", "Жен. ед.", "Перед гласной", "Мн. число"],
+    rows: [
+      [strong("ce"), strong("cette"), `<span class="muted-cell">cet</span>`, `<span class="muted-cell">ces</span>`]
+    ]
+  };
+}
+
+function compactPronounList(title, note, items) {
+  return {
+    title,
+    note,
+    columns: ["Форма", "Перевод"],
+    rows: items.map(([fr, ru]) => [strong(fr), escapeHtml(ru)])
+  };
+}
+
+function sectionRow(title, columns) {
+  return { section: title, columns };
+}
+
+function strong(value) {
+  return `<strong>${escapeHtml(value)}</strong>`;
+}
+
+function renderPronounRow(row, columns) {
+  if (row.section) {
+    return `
+      <tr class="pronoun-section-row">
+        <td colspan="${columns}">${escapeHtml(row.section)}</td>
+      </tr>
+    `;
+  }
+  return `
+    <tr>
+      ${row.map((cell) => `<td>${cell}</td>`).join("")}
+    </tr>
+  `;
 }
 
 function renderCalendar() {

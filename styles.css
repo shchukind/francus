@@ -691,6 +691,7 @@ tr:hover .hide-word-btn,
   place-items: center;
   border: 1px solid var(--line-soft);
   border-radius: 999px;
+  padding: 0 9px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
@@ -703,23 +704,42 @@ tr:hover .hide-word-btn,
 .pronoun-table {
   min-width: 620px;
   box-shadow: none;
+  table-layout: fixed;
 }
 
-.pronoun-table th:nth-child(1),
-.pronoun-table td:nth-child(1) {
-  width: 25%;
+.pronoun-table th,
+.pronoun-table td {
+  text-align: center;
+  vertical-align: middle;
 }
 
-.pronoun-table th:nth-child(3),
-.pronoun-table td:nth-child(3) {
-  width: 34%;
+.pronoun-table th:first-child,
+.pronoun-table td:first-child {
+  width: 16%;
 }
 
-.pronoun-table th:nth-child(4),
-.pronoun-table td:nth-child(4) {
-  width: 80px;
-  text-align: right;
+.pronoun-table td {
+  line-height: 1.45;
+}
+
+.pronoun-table strong {
+  font-size: 18px;
+}
+
+.pronoun-section-row td {
+  background: #f8fafc;
+  color: #44505b;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.pronoun-note,
+.muted-cell {
   color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
 }
 
 .verb-grid {
