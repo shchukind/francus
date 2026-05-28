@@ -663,6 +663,26 @@ function constructionGrammarTables() {
       ["faire connaissance avec qn", "познакомиться с кем-либо"],
       ["être tiré de", "быть взятым из"],
       ["aller chercher qn/qch", "пойти за кем-либо/чем-либо"]
+    ]),
+    compactPronounList("Parler à / de", "стр. 98-99", [
+      ["parler à qn", "говорить с кем-либо: parler à sa mère, lui parler"],
+      ["parler de qch, de qn", "говорить о чём-либо/ком-либо: parler de sa famille, de lui"],
+      ["de quoi parlez-vous ?", "о чём вы говорите?"],
+      ["à qui parlez-vous ?", "с кем вы говорите?"]
+    ]),
+    compactPronounList("Demander à qn de + infinitif", "стр. 100", [
+      ["demander à son professeur de répéter", "попросить преподавателя повторить"],
+      ["lui demander de faire le café", "попросить его/её сварить кофе"],
+      ["leur demander d'aller chercher des provisions", "попросить их сходить за продуктами"],
+      ["demande-lui de te réveiller", "попроси его/её тебя разбудить"]
+    ]),
+    compactPronounList("Faire qch", "стр. 100", [
+      ["faire son lit", "стелить постель"],
+      ["faire sa toilette", "умываться; приводить себя в порядок"],
+      ["faire sa gymnastique", "делать гимнастику"],
+      ["faire ses études", "учиться"],
+      ["faire la chambre", "убирать комнату"],
+      ["faire des courses", "делать покупки"]
     ])
   ];
 }

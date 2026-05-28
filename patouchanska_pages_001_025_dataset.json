@@ -13,9 +13,11 @@
       "Printed pages 25-56 were imported from scanned PDF page images; pronunciation-only examples are filtered where possible.",
       "Vocabulary table blocks are now being imported as table rows, not only as selected text words.",
       "Printed pages 57-85 were imported with explicit attention to vocabulary tables, remember blocks, verb tables, days, months, and numerals.",
-      "Printed pages 86-106 were imported with vocabulary tables, pronominal verbs, object pronoun table, tout forms, and supplemental-text vocabulary."
+      "Printed pages 86-106 were imported with vocabulary tables, pronominal verbs, object pronoun table, tout forms, and supplemental-text vocabulary.",
+      "Printed pages 97-100 were re-audited for missing vocabulary and Retenez grammar blocks: parler à/de, demander à qn de + infinitif, faire qch."
     ],
-    "last_import": "2026-05-18: imported vocabulary and grammar tables through printed page 106"
+    "last_import": "2026-05-18: imported vocabulary and grammar tables through printed page 106",
+    "last_audit": "2026-05-28: audited printed pages 97-100 and added missing vocabulary/grammar constructions"
   },
   "nouns": [
     {
@@ -1107,7 +1109,7 @@
       "indefinite_article": "un",
       "gender": "masculine",
       "translation_ru": "время после полудня; день",
-      "printed_page": 66,
+      "printed_page": 97,
       "source": "Словарные таблицы и блоки «Запомните», печатные страницы 58-85"
     },
     {
@@ -1822,6 +1824,15 @@
       "translation_ru": "любовь",
       "printed_page": 106,
       "source": "Словарные таблицы и грамматические блоки, печатные страницы 86-106"
+    },
+    {
+      "lemma": "dent de lait",
+      "definite_article": "la",
+      "indefinite_article": "une",
+      "gender": "feminine",
+      "translation_ru": "молочный зуб",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
     }
   ],
   "verbs": [
@@ -2014,10 +2025,10 @@
     },
     {
       "infinitive": "répéter",
-      "translation_ru": "повторять",
+      "translation_ru": "повторять; репетировать; разучивать",
       "type": "accent change -er",
       "tense": "present",
-      "printed_page": 26,
+      "printed_page": 97,
       "source": "manual image review, printed pages 25-56",
       "conjugation_group": 1
     },
@@ -2715,6 +2726,15 @@
       "tense": "present",
       "printed_page": 105,
       "source": "Словарные таблицы и грамматические блоки, печатные страницы 86-106",
+      "conjugation_group": 1
+    },
+    {
+      "infinitive": "siffler",
+      "translation_ru": "свистеть",
+      "type": "regular -er",
+      "tense": "present",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100",
       "conjugation_group": 1
     }
   ],
@@ -4573,6 +4593,118 @@
       "translation_ru": "не отводя глаз от телевизора",
       "printed_page": 96,
       "source": "Словарные таблицы и грамматические блоки, печатные страницы 86-106"
+    },
+    {
+      "text": "ensuite",
+      "type": "adverb",
+      "translation_ru": "затем",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "toujours",
+      "type": "adverb",
+      "translation_ru": "всё ещё; всегда",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "avec talent",
+      "type": "adverb",
+      "translation_ru": "талантливо",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "œuf dur",
+      "type": "phrase",
+      "translation_ru": "крутое яйцо",
+      "printed_page": 97,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "parler à qn",
+      "type": "verb construction",
+      "translation_ru": "говорить с кем-либо",
+      "printed_page": 98,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "lui parler",
+      "type": "verb construction",
+      "translation_ru": "говорить ему; говорить ей",
+      "printed_page": 98,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "leur parler",
+      "type": "verb construction",
+      "translation_ru": "говорить им",
+      "printed_page": 98,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "parler de qch, de qn",
+      "type": "verb construction",
+      "translation_ru": "говорить о чём-либо; о ком-либо",
+      "printed_page": 99,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "de quoi ?",
+      "type": "question word",
+      "translation_ru": "о чём?",
+      "printed_page": 99,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "demander à qn de + infinitif",
+      "type": "verb construction",
+      "translation_ru": "просить кого-либо сделать что-либо",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "demande-lui de + infinitif",
+      "type": "verb construction",
+      "translation_ru": "попроси его/её сделать что-либо",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "faire sa toilette",
+      "type": "verb construction",
+      "translation_ru": "умываться; приводить себя в порядок",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "faire sa gymnastique",
+      "type": "verb construction",
+      "translation_ru": "делать гимнастику",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "faire ses études",
+      "type": "verb construction",
+      "translation_ru": "учиться",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "faire la chambre",
+      "type": "verb construction",
+      "translation_ru": "убирать комнату",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
+    },
+    {
+      "text": "faire des courses",
+      "type": "verb construction",
+      "translation_ru": "делать покупки",
+      "printed_page": 100,
+      "source": "Аудит словаря и грамматики, печатные страницы 97-100"
     }
   ],
   "proper_names": [
