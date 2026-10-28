@@ -1,234 +1,41 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Francus</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=17" />
-  </head>
-  <body>
-    <aside class="sidebar">
-      <div class="brand">
-        <span class="brand-mark">Fr</span>
-        <div>
-          <h1>Francus</h1>
-        </div>
-      </div>
-      <nav class="nav" aria-label="Разделы">
-        <button class="nav-btn is-active" data-view="dictionary">Словарь</button>
-        <button class="nav-btn" data-view="verbs">Глаголы</button>
-        <button class="nav-btn" data-view="grammar">Грамматика</button>
-        <button class="nav-btn" data-view="calendar">Календарь</button>
-        <button class="nav-btn nav-btn-trainer trainer-start" data-view="trainer-gender">Род</button>
-        <button class="nav-btn nav-btn-trainer" data-view="trainer-translate">Перевод</button>
-        <button class="nav-btn nav-btn-trainer" data-view="trainer-conjugation">Спряжение</button>
-        <button class="nav-btn nav-btn-materials" data-view="materials">Материалы</button>
-      </nav>
-      <div class="stats-panel">
-        <div class="dataset-source" id="datasetSource">Учебник Потушанской · до стр. 106</div>
-        <div class="stats" id="datasetStats"></div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f8">
+  <meta name="description" content="Интерактивные упражнения Bilan 6–8 по французскому языку с ответами по нажатию.">
+  <title>Bilan 6–8 · Французский</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5075'/%3E%3Cpath d='M18 15v34M18 16h27M18 31h21' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20261028">
+  <script src="script.js?v=20261028" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Навигация по главам">
+      <a class="brand" href="#top"><span class="brand-mark">f.</span><span>Французский<span class="brand-sub">рабочая тетрадь</span></span></a>
+      <div class="nav-caption">ГЛАВЫ</div>
+      <a class="chapter-link active" href="#top"><span class="chapter-dot"></span><span>Bilan 6–8</span><span class="chapter-count">15</span></a>
+<a class="chapter-link" href="lecon-neuf.html"><span class="chapter-dot"></span><span>Leçon neuf</span><span class="chapter-count">8</span></a>
+      <a class="chapter-link" href="lecon-dix.html"><span class="chapter-dot"></span><span>Leçon dix</span><span class="chapter-count">19</span></a>
+      <a class="chapter-link legacy-link" href="old/"><span class="chapter-dot"></span><span>Старая платформа ↗</span></a>
+<div class="nav-caption nav-caption-second">ТЕКСТЫ</div>
+      <a class="chapter-link" href="la-langue-francaise.html"><span class="chapter-dot"></span><span>La langue française</span></a>
+<a class="chapter-link" href="antiquite.html"><span class="chapter-dot"></span><span>Histoire · Antiquité</span></a>
+      <div class="nav-caption nav-caption-second">УПРАЖНЕНИЯ</div>
+      <nav id="exercise-nav"></nav>
+      <div class="sidebar-footer">По материалам присланных страниц<br>108–114</div>
     </aside>
 
-    <main class="main">
-      <section class="toolbar">
-        <div>
-          <h2 id="viewTitle">Словарь</h2>
-          <p id="viewSubtitle">Лексика до печатной страницы 106</p>
-        </div>
-        <label class="search" id="searchWrapper">
-          <span>Поиск</span>
-          <input id="searchInput" type="search" placeholder="table, письмо, parler" />
-        </label>
-      </section>
-
-      <section class="view is-active" id="dictionaryView">
-        <div class="filters" aria-label="Фильтры словаря">
-          <button class="chip is-active" data-dictionary-filter="all">Все</button>
-          <button class="chip" data-dictionary-filter="noun">Существительные</button>
-          <button class="chip" data-dictionary-filter="verb">Глаголы</button>
-          <button class="chip" data-dictionary-filter="adjective">Прилагательные</button>
-          <button class="chip" data-dictionary-filter="phrase">Служебные</button>
-        </div>
-        <div class="filters secondary-filters" id="dictionaryNounGenderFilters" aria-label="Фильтр существительных по роду">
-          <button class="chip is-active" data-noun-gender-filter="all">Любой род</button>
-          <button class="chip" data-noun-gender-filter="feminine">Женский</button>
-          <button class="chip" data-noun-gender-filter="masculine">Мужской</button>
-        </div>
-        <div class="filters secondary-filters" id="dictionaryVerbTypeFilters" aria-label="Фильтр глаголов по спряжению"></div>
-        <div class="filters secondary-filters" id="dictionaryServiceTypeFilters" aria-label="Фильтр служебных слов"></div>
-        <div class="filters sort-filters" aria-label="Сортировка словаря">
-          <button class="archive-toggle" id="archiveOpenBtn" type="button">Архив <span id="archiveCount">0</span></button>
-          <button class="chip is-active" data-dictionary-sort="newest">По новизне</button>
-          <button class="chip" data-dictionary-sort="alphabet">По алфавиту</button>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Французский</th>
-                <th>Тип</th>
-                <th>Перевод</th>
-                <th>Род / форма</th>
-                <th>Стр.</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="dictionaryRows"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="view" id="verbsView">
-        <div class="filters" id="verbsTypeFilters" aria-label="Фильтр глаголов по спряжению"></div>
-        <div class="filters sort-filters" id="verbsSortFilters" aria-label="Сортировка глаголов">
-          <button class="chip is-active" data-verbs-sort="newest">По новизне</button>
-          <button class="chip" data-verbs-sort="alphabet">По алфавиту</button>
-        </div>
-        <div class="verb-grid" id="verbCards"></div>
-      </section>
-
-      <section class="view" id="grammarView">
-        <div class="filters" aria-label="Раздел грамматики">
-          <button class="chip is-active" data-grammar-tab="pronouns">Местоимения</button>
-          <button class="chip" data-grammar-tab="adjectives">Прилагательные</button>
-          <button class="chip" data-grammar-tab="questions">Вопросы</button>
-          <button class="chip" data-grammar-tab="time">Время</button>
-          <button class="chip" data-grammar-tab="constructions">Конструкции</button>
-        </div>
-        <div class="pronoun-sections" id="grammarSections"></div>
-      </section>
-
-      <section class="view" id="calendarView">
-        <div class="filters" aria-label="Раздел календаря">
-          <button class="chip is-active" data-calendar-tab="weekdays">Дни недели</button>
-          <button class="chip" data-calendar-tab="months">Месяцы</button>
-          <button class="chip" data-calendar-tab="numbers">Числа</button>
-        </div>
-        <div class="calendar-grid" id="calendarGrid"></div>
-      </section>
-
-      <section class="view" id="materialsView">
-        <div class="materials-grid">
-          <a class="material-card" href="potushanskaya-textbook.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Учебник Потушанской</strong>
-            <span>Основной учебник</span>
-          </a>
-          <a class="material-card" href="potushanskaya-exercises.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Упражнения к учебнику</strong>
-            <span>Сборник упражнений</span>
-          </a>
-          <a class="material-card" href="present-verbs-exercises.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Mettez le verbe au présent</strong>
-            <span>Упражнения на настоящее время</span>
-          </a>
-          <a class="material-card" href="phonetics-a-nasal.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Фонетика: a носовое</strong>
-            <span>Звук и артикуляция</span>
-          </a>
-          <a class="material-card" href="phonetics-o-nasal.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Фонетика: o носовое</strong>
-            <span>Звук и артикуляция</span>
-          </a>
-          <a class="material-card" href="phonetics-oe-nasal.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Фонетика: oe носовое</strong>
-            <span>Звук и артикуляция</span>
-          </a>
-          <a class="material-card" href="phonetics-en-nasal.pdf" target="_blank">
-            <span class="material-type">PDF</span>
-            <strong>Фонетика: en носовое</strong>
-            <span>Звук и артикуляция</span>
-          </a>
-          <a class="material-card" href="https://www.podcastfrancaisfacile.com/dialogue-debutant-francais" target="_blank">
-            <span class="material-type">WEB</span>
-            <strong>Dialogues débutants</strong>
-            <span>Podcast français facile</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="view trainer" id="trainerGenderView">
-        <div class="trainer-panel">
-          <div class="prompt-kicker">Выбери артикль</div>
-          <div class="prompt" id="genderPrompt"></div>
-          <div class="trainer-translation" id="genderTranslation"></div>
-          <div class="answers two">
-            <button class="answer-btn" data-gender-answer="un">un</button>
-            <button class="answer-btn" data-gender-answer="une">une</button>
-          </div>
-          <div class="feedback" id="genderFeedback"></div>
-          <button class="secondary" id="nextGenderBtn">Следующее</button>
-        </div>
-      </section>
-
-      <section class="view trainer" id="trainerTranslateView">
-        <div class="trainer-panel">
-          <div class="mode-switch" aria-label="Направление перевода">
-            <button class="chip is-active" data-translate-mode="fr-ru">Французский → русский</button>
-            <button class="chip" data-translate-mode="ru-fr">Русский → французский</button>
-          </div>
-          <div class="prompt-kicker" id="translateModeLabel"></div>
-          <div class="prompt" id="translatePrompt"></div>
-          <input class="trainer-input" id="translateInput" autocomplete="off" />
-          <div class="actions">
-            <button class="primary" id="checkTranslateBtn">Проверить</button>
-            <button class="secondary" id="nextTranslateBtn">Следующее</button>
-          </div>
-          <div class="feedback" id="translateFeedback"></div>
-        </div>
-      </section>
-
-      <section class="view trainer" id="trainerConjugationView">
-        <div class="trainer-panel">
-          <div class="prompt-kicker" id="conjugationHint"></div>
-          <div class="prompt" id="conjugationPrompt"></div>
-          <input class="trainer-input" id="conjugationInput" autocomplete="off" />
-          <div class="actions">
-            <button class="primary" id="checkConjugationBtn">Проверить</button>
-            <button class="secondary" id="nextConjugationBtn">Следующее</button>
-          </div>
-          <div class="feedback" id="conjugationFeedback"></div>
-        </div>
-      </section>
+    <main id="top" class="content">
+      <header class="topbar"><button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button><span class="breadcrumb">Главы <span>/</span> Bilan 6–8</span><span class="topbar-right">FR · RU</span></header>
+      <div class="page-shell">
+        <div class="intro"><div class="eyebrow">ГЛАВА 01 <span></span> УРОВЕНЬ НАЧАЛЬНЫЙ</div><h1>Bilan <em>6–8</em></h1><p>Упражнения из учебника. Нажимайте на скрытые фрагменты, чтобы проверить ответ.</p></div>
+        <div class="toolbar"><span id="progress">0 из 15 упражнений</span><button id="toggle-all" class="toolbar-button" type="button">Показать все ответы</button></div>
+        <div id="exercises"></div>
+        <footer class="page-footer">Bilan 6–8 <span>·</span> Страницы 108–114</footer>
+      </div>
     </main>
-
-    <div class="modal" id="verbModal" hidden>
-      <div class="modal-backdrop" data-close-verb-modal></div>
-      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="verbModalTitle">
-        <button class="icon-close" type="button" data-close-verb-modal aria-label="Закрыть">×</button>
-        <div class="verb-head">
-          <div>
-            <h3 id="verbModalTitle"></h3>
-            <div id="verbModalTranslation"></div>
-          </div>
-          <div class="verb-type" id="verbModalType"></div>
-        </div>
-        <div class="forms modal-forms" id="verbModalForms"></div>
-      </section>
-    </div>
-
-    <div class="modal" id="archiveModal" hidden>
-      <div class="modal-backdrop" data-close-archive-modal></div>
-      <section class="modal-panel archive-panel" role="dialog" aria-modal="true" aria-labelledby="archiveTitle">
-        <button class="icon-close" type="button" data-close-archive-modal aria-label="Закрыть">×</button>
-        <div class="archive-head">
-          <div>
-            <h3 id="archiveTitle">Архив</h3>
-            <p>Скрытые слова не показываются в словаре.</p>
-          </div>
-          <button class="secondary archive-clear" id="archiveClearBtn" type="button">Вернуть всё</button>
-        </div>
-        <div class="archive-list" id="archiveList"></div>
-      </section>
-    </div>
-
-    <script src="script.js?v=23"></script>
-  </body>
+  </div>
+</body>
 </html>
