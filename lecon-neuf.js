@@ -179,17 +179,162 @@ const exercises = [
   ]}
 ];
 
-const names = ['Dates','Mémorisez','Agenda','Activités','Pronoms','Futur proche','Questions','Savoir'];
+
+const audioBlank = '<span class="audio-blank" aria-label="Пропуск из аудиозадания">…</span>';
+const missingAudio = note('Аудиозапись не приложена. Задание сохранено; точные ответы по записи пока недоступны.');
+const dialogueRows = rows => '<div class="dialogue">' + rows.map(([speaker,line]) => '<p><b>' + speaker + ' :</b> ' + line + '</p>').join('') + '</div>';
+
+exercises.push(
+{n:9,title:'Savoir / connaître.',page:126,parts:[list([
+`Tu ${gap('connais')} le père de Sébastien ?`,
+`Tu ${gap('connais')} l’adresse de Fabrice ? — Je ne ${gap('connais')} pas son adresse exacte, mais je ${gap('sais')} où il habite.`,
+`Vous ne ${gap('savez')} pas travailler, messieurs ! Vous n’êtes pas compétents !`,
+`Vous ${gap('connaissez')} la profession de Mme Serval ? — Non, mais je ${gap('sais')} qu’elle travaille à l’hôpital.`,
+`Elle ne ${gap('sait')} pas pourquoi Antoine la quitte.`,
+`Ils ne ${gap('connaissent')} pas Paris. Il faut aller les chercher à la gare.`
+]),note('Connaître + nom : connaître une personne, une adresse, Paris. Savoir + proposition / infinitif : savoir où il habite, savoir travailler.')]},
+{n:10,title:'Attendre / répondre / perdre.',page:126,parts:[
+part('a','Mettez les verbes à la bonne forme. Раскройте скобки.',list([
+`Vous (perdre) ${gap('perdez')} votre temps ici.`,
+`Est-ce que vous (attendre) ${gap('attendez')} le maire ? — Oui, je l’${gap('attends')}.`,
+`Pourquoi tu ne me (répondre) ${gap('réponds')} pas ?`,
+`Nous (attendre) ${gap('attendons')} le bus.`,
+`Les enfants (attendre) ${gap('attendent')} ce spectacle.`,
+`Elle (perdre) ${gap('perd')} toujours ses portables.`,
+`Les secrétaires (répondre) ${gap('répondent')} à toutes les questions des clients.`,
+`Qu’est-ce qu’on (attendre) ${gap('attend')} ici ?`
+])),
+part('b','Traduisez.',pairs([
+['Вы ждёте автобус? — Нет, мы ждём такси.','Vous attendez le bus ? — Non, nous attendons un taxi.'],
+['Почему ты не отвечаешь? Я жду.','Pourquoi tu ne réponds pas ? J’attends.'],
+['Я не знаю, где он. Его мобильный не отвечает.','Je ne sais pas où il est. Son portable ne répond pas.'],
+['Если не отвечаешь быстро (vite) клиентам, то теряешь их.','Si tu ne réponds pas vite aux clients, tu les perds.'],
+['Мы отвечаем на все письма.','Nous répondons à toutes les lettres.'],
+['Пассажиры иногда теряют свои вещи.','Les voyageurs perdent parfois leurs affaires.']
+]))
+]},
+{n:11,title:'Révisez la conjugaison : prendre et attendre.',page:126,parts:[
+part('a','Mettez les verbes à la bonne forme. Раскройте скобки.',list([
+`Vous (comprendre) ${gap('comprenez')} pourquoi ils (attendre) ${gap('attendent')} ? Ils (perdre) ${gap('perdent')} leur temps !`,
+`Ils (répondre) ${gap('répondent')} qu’ils (apprendre) ${gap('apprennent')} le russe.`,
+`Si vous ne (répondre) ${gap('répondez')} pas, demain nous (prendre) ${gap('prenons')} cette décision.`,
+`Nous (attendre) ${gap('attendons')} leur réaction.`,
+`Nous ne (comprendre) ${gap('comprenons')} pas pourquoi ils (prendre) ${gap('prennent')} ces médicaments.`
+]),'В пункте 3 по условию повторяется настоящее время: prenons. Demain допускает présent со значением запланированного будущего.'),
+part('b','Traduisez les séries.',pairs([
+['Мы понимаем','Nous comprenons.'],['вы ждёте','Vous attendez.'],['я учу','J’apprends.'],['ты отвечаешь','Tu réponds.'],
+['они берут','Ils prennent.'],['они теряют','Ils perdent.'],['ты не понимаешь','Tu ne comprends pas.'],['я не жду','Je n’attends pas.'],
+['мы теряем','Nous perdons.'],['они учат','Ils apprennent.'],['они понимают','Ils comprennent.'],['они не отвечают','Ils ne répondent pas.'],
+['я не теряю','Je ne perds pas.'],['он отвечает','Il répond.'],['она не ждёт','Elle n’attend pas.'],['она не учит','Elle n’apprend pas.']
+]))
+]},
+{n:12,title:'Répondez au message de Julien.',page:127,parts:[
+note('Un ami français vous écrit un message. Répondez à son message. Utilisez les verbes pouvoir, vouloir, devoir, savoir.'),
+'<div class="poem" lang="fr">Salut … !<br>Qu’est-ce que tu vas faire ce week-end ? J’organise une petite fête chez moi, samedi soir à 19 h. Nicolas et Léa vont venir aussi. Au programme : une grande pizza et un bon film ! Si tu veux, tu peux venir avec un(e) ami(e). Je t’attends !<br><br>Bisous,<br>Julien</div>',
+'<span class="model-label">Пример ответа · возможны другие варианты</span>'+reveal('Salut Julien !<br>Merci pour ton invitation ! Je veux bien venir à ta fête samedi. Je dois travailler l’après-midi, mais je peux être chez toi à 19 h. Tu sais si Nicolas et Léa vont apporter quelque chose ? Je peux apporter un dessert et je vais venir avec mon amie Claire.<br>À samedi !<br>Bisous,<br>Alex')
+]},
+{n:13,title:'Écoutez le message et répondez aux questions.',page:127,parts:[
+missingAudio,note('rappeler qn — перезвонить кому-либо ; laisser un message — оставить сообщение.'),
+...[
+['La personne qui laisse le message est :',['Monsieur Richard','Monsieur Guichard','Monsieur Bouchard']],
+['La personne qui laisse le message est :',['directeur','docteur','professeur']],
+['Il appelle parce que :',['le fils de Madame Verdun est très fatigué','le fils de Madame Verdun n’est pas sage à l’école','le fils de Madame Verdun est malade']],
+['Le fils de Madame Verdun s’appelle :',['Bruno','Arnaud','Henri']],
+['Madame Verdun doit venir chercher son fils :',['demain','ce matin','maintenant']]
+].map(([question,choices],i)=>'<fieldset class="listening-choice"><legend>'+(i+1)+'. '+question+'</legend>'+choices.map((choice,j)=>'<label><input type="radio" name="lesson9-audio13-'+i+'" value="'+j+'"> '+choice+'</label>').join('')+'</fieldset>'),
+'<p>6. Complétez le numéro de téléphone : <span lang="fr">06 <span class="audio-blank">…</span> 48 <span class="audio-blank">…</span> 56</span></p>'
+]},
+{n:14,title:'Écoutez et complétez le dialogue.',page:128,parts:[
+missingAudio,
+dialogueRows([
+['Elle','Benoît, pourquoi est-ce que tu ne me parles pas ?'],
+['Lui','Mais je te parle !'],
+['Elle',`Non, tu ${audioBlank}, tu ${audioBlank}, et après tu ${audioBlank} ou tu ${audioBlank} et moi, tu ${audioBlank} !`],
+['Lui',`Mais je ${audioBlank} ! Qu’est-ce que tu as, chérie ? Tu fais la tête ?`],
+['Elle',`Oui, je fais la tête parce que je ${audioBlank} ! Je ${audioBlank} tout à la maison : je ${audioBlank}, je ${audioBlank} et je ${audioBlank}. Je ${audioBlank} toute la journée ! Et le soir, je ${audioBlank} ! Et je veux te parler ! Et toi, tu ${audioBlank} !`],
+['Lui',`Je ${audioBlank}. Excuse-moi. Je ${audioBlank} au bureau, je ${audioBlank}, moi aussi, mais tu ${audioBlank} bien que je ${audioBlank}.`],
+['Elle',`Tu ${audioBlank}, oui. Mais tu ${audioBlank} quel jour est aujourd’hui ?`],
+['Lui',`Oui, je ${audioBlank}. On est ${audioBlank}.`],
+['Elle','Et la date ? On est quelle date ?'],
+['Lui',`On est ${audioBlank}. Pourquoi ?`],
+['Elle','Mais parce que c’est l’anniversaire de notre mariage !'],
+['Lui',`Oh, chérie, excuse-moi ! Bien sûr que je ${audioBlank} la date de notre mariage ! Et ce soir, je ${audioBlank} au restaurant ! Je ${audioBlank} un très bon restaurant ${audioBlank} !`],
+['Elle',`Tu ${audioBlank} au restaurant ? Oh, Benoît, je ${audioBlank}, on ${audioBlank} en tête à tête comme avant !`]
+]),note('faire la tête — обижаться, дуться ; mariage (m) — свадьба, брак ; comme avant — как раньше ; en tête à tête — наедине, вдвоём.')
+]},
+{n:15,title:'Traduisez.',page:128,parts:[
+note('Варианты перевода для самопроверки. В предложениях о предстоящих действиях используется futur proche.'),
+part('a','Les phrases · предложения.',pairs([
+['Она не работает, но она всегда очень занята. Утром она идёт в спортзал, после обеда у неё занятия музыкой или французским языком. Вечером она встречается с друзьями, они все вместе куда-нибудь идут: в кино, театр или ресторан.','Elle ne travaille pas, mais elle est toujours très occupée. Le matin, elle va à la salle de sport. L’après-midi, elle a un cours de musique ou de français. Le soir, elle retrouve ses amis et ils sortent tous ensemble : ils vont au cinéma, au théâtre ou au restaurant.'],
+['В машине я всегда слушаю радио.','En voiture, j’écoute toujours la radio.'],
+['Я не хочу вновь вас потерять. Где я могу вас найти?','Je ne veux pas vous perdre de nouveau. Où est-ce que je peux vous trouver ?'],
+['Где начинается эта история? — Эта история начинается в поезде.','Où commence cette histoire ? — Cette histoire commence dans le train.'],
+['Что вы делаете завтра вечером? Мы можем поужинать вместе?','Qu’est-ce que vous faites demain soir ? Est-ce que nous pouvons dîner ensemble ?'],
+['Почему ты всегда опаздываешь? Почему я должен тебя ждать?','Pourquoi es-tu toujours en retard ? Pourquoi est-ce que je dois t’attendre ?'],
+['Почему ты не отвечаешь? — Потому что это твоё дело.','Pourquoi tu ne réponds pas ? — Parce que c’est ton affaire.'],
+['В выходные они часто остаются дома. Она занимается хозяйством, готовит, он ходит за покупками. Вечером они вместе смотрят телевизор. Они довольны.','Le week-end, ils restent souvent à la maison. Elle fait le ménage et la cuisine ; lui, il fait les courses. Le soir, ils regardent la télé ensemble. Ils sont contents.'],
+['Мы знаем, что они закончат проект на этой неделе. Они не будут терять время!','Nous savons qu’ils vont terminer le projet cette semaine. Ils ne vont pas perdre leur temps !'],
+['Он приглашает её танцевать. Она очень рада.','Il l’invite à danser. Elle est très contente.'],
+['Они вернутся на выходных, и мы вместе обсудим этот вопрос (question, f).','Ils vont revenir ce week-end et nous allons discuter de cette question ensemble.'],
+['Ты можешь подождать 15 минут? Я приму душ, а потом мы вместе выпьем кофе.','Tu peux attendre quinze minutes ? Je vais prendre une douche, puis nous allons prendre un café ensemble.'],
+['Врач опаздывает. Я вас прошу подождать его. — Нет проблем, я его подожду. Я не спешу.','Le médecin est en retard. Je vous prie de l’attendre. — Pas de problème, je vais l’attendre. Je ne suis pas pressé.'],
+['Когда у вас встреча с директором банка? — В пятницу, 16 февраля.','Quand est-ce que vous avez rendez-vous avec le directeur de la banque ? — Vendredi 16 février.'],
+['Дочь Анны ходит в музыкальную школу и учится петь.','La fille d’Anne va à l’école de musique et apprend à chanter.']
+])),
+part('b','Les textes et les dialogues.',pairs([
+['Марк теряет Клэр на вокзале. Он не знает, как её найти, так как у него нет её номера телефона. Он ищет её повсюду. Вдруг он встречает её случайно (par hasard). Они счастливы.','Marc perd Claire à la gare. Il ne sait pas comment la trouver parce qu’il n’a pas son numéro de téléphone. Il la cherche partout. Tout à coup, il la rencontre par hasard. Ils sont heureux.'],
+['Ты хочешь пригласить на ужин своих друзей с детьми? Но дети будут везде бегать, по всему дому! Все устанут! — Ты не понимаешь! В их возрасте это нормально! И потом, я знаю этих детей, они послушные. Они поиграют в саду, порисуют, и все будут довольны!','Tu veux inviter tes amis à dîner avec leurs enfants ? Mais les enfants vont courir partout, dans toute la maison ! Tout le monde va être fatigué ! — Tu ne comprends pas ! À leur âge, c’est normal ! Et puis, je connais ces enfants, ils sont sages. Ils vont jouer dans le jardin et dessiner, et tout le monde va être content !'],
+['Что ты ждёшь? Нужно бежать за (après) ней.','Qu’est-ce que tu attends ? Il faut courir après elle.'],
+['Лео, так нельзя разговаривать с папой. Что с тобой? Ты устал?','Léo, tu ne dois pas parler comme ça à papa. Qu’est-ce que tu as ? Tu es fatigué ?'],
+['Ты знаешь, когда у него день рождения? — Я не знаю точной даты, но я знаю, что день рождения у него в январе. В день (le jour de) его рождения часто бывает очень холодно.','Tu sais quand est son anniversaire ? — Je ne connais pas la date exacte, mais je sais que son anniversaire est en janvier. Le jour de son anniversaire, il fait souvent très froid.'],
+['Снова идёт дождь! — Но сейчас октябрь! Погода плохая для прогулок, но мы останемся дома, приготовим вкусный ужин, посмотрим новый фильм.','Il pleut de nouveau ! — Mais nous sommes en octobre ! Il fait mauvais pour se promener, mais nous allons rester à la maison, préparer un bon dîner et regarder un nouveau film.'],
+['Наш преподаватель по литературе (littérature, f) очень умный и серьёзный. Он знает всех французских писателей. Он говорит, что мы должны прочитать романы Камю (Camus), а в июне у нас будет экзамен.','Notre professeur de littérature est très intelligent et sérieux. Il connaît tous les écrivains français. Il dit que nous devons lire les romans de Camus et qu’en juin, nous allons avoir un examen.'],
+['Где мой учебник по истории? Не могу его найти! — Он на кровати! Там ещё (aussi) твой учебник по испанскому языку.','Où est mon manuel d’histoire ? Je ne peux pas le trouver ! — Il est sur le lit ! Ton manuel d’espagnol est aussi sur le lit.']
+])),
+note('В 15a, пункт 7 ответ «это твоё дело» сохранён по исходной странице: c’est ton affaire. Для женщин в пункте 13: Je ne suis pas pressée.')
+]},
+{n:16,title:'Complétez le dialogue. Дополните диалог.',page:129,parts:[
+part('a','Retrouvez les répliques du dialogue.',dialogueRows([
+['Marc','Claire ! Enfin, c’est vous !'],
+['Claire',`Marc ! ${gap('Ce n’est pas vrai')} ! Mais… pourquoi ? comment ?`],
+['Marc',`Claire, je ${gap('vous cherche partout')} ! Je ${gap('n’ai pas')} votre numéro de téléphone !`],
+['Claire',`Mais qu’est-ce que vous ${gap('faites là')} ?`],
+['Marc',`C’est un hasard ! Je suis là pour ${gap('parler au directeur de mon projet')}. Et voilà, la secrétaire du directeur m’appelle ! Excusez-moi Claire, je ${gap('dois y aller')}, mais je ne veux pas ${gap('vous perdre')} de nouveau !`],
+['Claire',`Mais ${gap('vous savez')} maintenant ${gap('où me trouver')}.`],
+['Marc',`Est-ce que ${gap('je peux vous inviter à dîner')} ce soir ?`],
+['Claire',`${gap('Avec plaisir')}, Marc.`],
+['Marc',`${gap('À quelle heure')} vous terminez votre travail ?`],
+['Claire',`${gap('On est')} mardi aujourd’hui ? Je termine à 18 h.`],
+['Marc',`Très bien. Je ${gap('viens vous chercher')} à 18 h. À ce soir, Claire !`]
+]),'Ответы восстановлены по полному диалогу на странице 117.'),
+part('b','Jouez cette scène. Разыграйте сцену.',note('Прочитайте диалог по ролям. Затем скройте ответы и попробуйте восстановить реплики без подсказок.'))
+]}
+);
+
+const names = ['Dates','Mémorisez','Agenda','Activités','Pronoms','Futur proche','Questions','Savoir','Savoir / connaître','Attendre · répondre · perdre','Prendre · attendre','Message de Julien','Message audio','Dialogue audio','Traduction','Dialogue à compléter'];
 document.querySelector('#exercise-nav').innerHTML = exercises.map((exercise,index) => `<a href="#exercise-${exercise.n}"><span>${String(exercise.n).padStart(2,'0')}</span><span>${names[index]}</span></a>`).join('');
-document.querySelector('#exercises').innerHTML = exercises.map(exercise => `<article class="exercise" id="exercise-${exercise.n}"><div class="exercise-head"><div class="number">${exercise.n}.</div><div class="exercise-heading"><h2>${exercise.title}</h2></div></div><div class="exercise-body">${exercise.parts.join('')}</div></article>`).join('');
+document.querySelector('#exercises').innerHTML = exercises.map(exercise => `<article class="exercise" id="exercise-${exercise.n}"><div class="exercise-head"><div class="number">${exercise.n}.</div><div class="exercise-heading"><h2>${exercise.title}</h2><a class="source-reference" href="lecon-neuf-pages.html#page-${exercise.page || ({1:121,2:121,3:122,4:123,5:123,6:124,7:125,8:125})[exercise.n]}">Учебник · с. ${exercise.page || ({1:121,2:121,3:122,4:123,5:123,6:124,7:125,8:125})[exercise.n]} ↗</a></div></div><div class="exercise-body">${exercise.parts.join('')}</div></article>`).join('');
 
 const revealButtons = [...document.querySelectorAll('.gap,.reveal')];
 function setShown(button, shown) { button.classList.toggle('shown',shown); button.setAttribute('aria-pressed',String(shown)); }
 document.querySelector('#exercises').addEventListener('click', event => { const button = event.target.closest('.gap,.reveal'); if (button) setShown(button,!button.classList.contains('shown')); });
 document.querySelector('#toggle-all').addEventListener('click', event => { const show = event.currentTarget.textContent.includes('Показать'); revealButtons.forEach(button => setShown(button,show)); event.currentTarget.textContent = show ? 'Скрыть все ответы' : 'Показать все ответы'; });
 const seen = new Set();
-const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { seen.add(entry.target.id); document.querySelector('#progress').textContent = `${seen.size} из 8 упражнений`; document.querySelectorAll('#exercise-nav a').forEach(link => link.classList.toggle('current',link.getAttribute('href') === `#${entry.target.id}`)); } }); }, {rootMargin:'-20% 0px -65% 0px'});
+const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { seen.add(entry.target.id); document.querySelector('#progress').textContent = `${seen.size} из ${exercises.length} упражнений`; document.querySelectorAll('#exercise-nav a').forEach(link => link.classList.toggle('current',link.getAttribute('href') === `#${entry.target.id}`)); } }); }, {rootMargin:'-20% 0px -65% 0px'});
 document.querySelectorAll('.exercise').forEach(element => observer.observe(element));
 const menu = document.querySelector('.sidebar'); const menuToggle = document.querySelector('#menu-toggle');
 menuToggle.addEventListener('click', () => { const open = menu.classList.toggle('open'); menuToggle.setAttribute('aria-expanded',String(open)); });
-document.querySelectorAll('#exercise-nav a').forEach(link => link.addEventListener('click', () => { menu.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); }));
+function scrollToExercise(hash) {
+  if (!/^#exercise-\d+$/.test(hash)) return;
+  requestAnimationFrame(() => document.querySelector(hash)?.scrollIntoView({behavior:'instant',block:'start'}));
+}
+document.querySelectorAll('#exercise-nav a').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  menu.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  const hash = link.getAttribute('href');
+  history.pushState(null,'',hash);
+  scrollToExercise(hash);
+}));
+window.addEventListener('hashchange', () => scrollToExercise(location.hash));
+window.addEventListener('load', () => scrollToExercise(location.hash), {once:true});
